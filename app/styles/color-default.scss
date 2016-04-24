@@ -1,0 +1,416 @@
+@import "utils/_var.scss";
+@import "themes/_color-var-default.scss";
+
+body{
+	color: $c-txtgreen;
+}
+
+a{
+	color: $c-green;
+	text-decoration: none;
+	transition: 400ms;
+	&:hover{
+		color: $c-darkgreen;
+	}
+}
+
+h1, h2, h3{
+	color: $c-darkgreen;
+}
+
+.mobile-nav{
+	color: #fff;
+	span{
+		background: rgba($c-green, 0.8);
+	}
+}
+
+.loader{
+	background: $c-green;
+	.heartbeat-loader:not(:required):after, 
+	.heartbeat-loader:not(:required):before{
+		background: none;
+		color: $c-lightgreen;
+	}
+}
+
+form{
+	input[type='text'], input[type='email'], input[type='password'], textarea{
+		box-shadow: 0 0 5px rgba($c-green, 0);
+		border: 1px solid rgba($c-green, 0);
+		&:focus{
+			outline: none;
+			border: 1px solid rgba($c-green, 1);
+			box-shadow: 0 0 5px rgba($c-green, 1);
+		}
+	}
+}
+
+.image-container{	
+	a{
+		&:hover:before{
+			background: rgba($c-green, 0.8);
+		}
+		&:before{
+			background: rgba($c-green, 0);
+		}
+	}
+}
+
+.button{
+	border-color: $c-green;
+	color: $c-green;
+	background: none;
+	&:hover{
+		background: $c-green;
+		color: #fff;
+		border-color: $c-green;
+	}
+}
+
+.banner{
+	&__gradient{
+		background-image: linear-gradient(to right, $c-green 37.5%, rgba($c-green, 0));
+		opacity: 0.8;
+	}
+	&__border{
+		border-style: solid;
+		border-color: #fff;
+	}
+	h1, h2{
+		color: #fff;
+	}
+	h2{
+		font-family: $f-sourcesanpro;
+		text-transform: uppercase;
+	}
+}
+
+#topnav,
+.topnav{
+	background: rgba($c-green, 0.8);
+	.inner{
+		background: rgba($c-green, 0.8);
+		a{
+			color: #fff;
+			transition: 400ms;
+			&:hover{
+				color: $c-darkgreen;
+			}
+		}
+		li.current{
+			a{
+				color: $c-darkgreen;
+			}
+		}
+	}
+}
+
+.lomo{
+	position: relative;
+	&:after{
+		content: '';
+	    height: 100%;
+	    width: 100%;
+	    position: absolute;
+	    display: block;
+	    top: 0;
+	    left: 0;
+	    border-radius: 100%;
+	    background: 
+	    	radial-gradient(160px circle at 30% 10%, #FFB100, rgba(255, 255, 255, 0)), 
+	    	radial-gradient(300px circle at 80% 60%, #4DC28E, rgba(255, 255, 255, 0));
+	    mix-blend-mode: overlay;
+	    opacity: 0;
+	    transition: 400ms;
+	}
+	&:hover:after{
+		opacity: 1;
+	}
+}
+
+.lightbg{
+	background: lighten(beige, 8%) url("../images/light-pattern.jpg") repeat;
+	&--green{
+		background: lighten($c-lightgreen, 15%) url("../images/light-pattern.jpg") repeat;
+		position: relative;
+		>*{
+			position: relative;
+			z-index: 1;
+		}
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $c-green;
+			opacity: 0.1;
+		}
+	}
+}
+
+.darkbg{
+	background: lighten($c-darkgreen, 3%) url("../images/dark-pattern.jpg") repeat;
+	.section{
+		&__title{
+			color: #fff;
+		}
+	}
+	h2, h3, h4, p, .button{
+		color: #fff;
+	}
+
+	form{
+		label{
+			> span{
+				color: #fff;
+			}
+		}
+	}
+}
+
+.section{
+	&__border{
+		&:before{ border-color: $c-green; }
+	}
+	&__title{
+		&:before,
+		&:after{
+			color: $c-green;
+		}
+	}
+}
+
+
+.couple{
+	&__photo{
+		border-color: $c-green;
+	}
+}
+
+.social{
+	li{
+		a{
+			transition: 400ms;
+			color: $c-green;
+			&:before{
+				//color: $c-green;
+			}
+			&:hover{
+				color: $c-darkgreen;
+			}
+		}
+	}
+}
+
+.carousel{
+	&__content{
+		&__wrapper{
+			> a{
+				&:hover:before{
+					background: rgba($c-green, 0.8);
+				}
+				&:before{
+					background: rgba($c-green, 0);
+				}
+			}
+		}
+		&__text{
+			background: #fff;
+		}
+	}
+}
+
+.image-container,
+.image-border{
+	border-color: $c-green;
+}
+
+#accommodations,
+.accommodations{
+	.pws_tabs_container{
+		.pws_tabs{
+			&_controll{
+				li{
+					a{
+						color: $c-darkgreen;
+						&.pws_tab_active{
+							background: none;
+							&:after{
+								border-color: $c-green;
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.accommodations{
+	&__content{
+		h2{
+			color: $c-darkgreen;
+		}
+	}
+}
+
+.gift{
+	&__carousel{
+		.slick-next, 
+		.slick-prev, 
+		.slick-next:focus, 
+		.slick-prev:focus{
+			background: none;
+			&:hover{
+				background: none;
+			}
+		}
+		.slick-next, .slick-prev{
+			&:before{
+				color: $c-green;
+				transition: 400ms;
+			}
+			&:hover{
+				&:before{
+					color: $c-lightgreen;
+				}
+			}
+		}
+	}
+}
+
+.slick-initialized .slick-slide{
+	outline: none;
+}
+
+.slick-next,
+.slick-prev,
+.slick-next:focus,
+.slick-prev:focus{
+	background: rgba($c-green, 0.8);
+	&:hover{
+		background: rgba($c-green, 1);
+	}
+}
+
+.mfp-bg{
+	background: $c-green;
+	opacity: 0.5;
+}
+
+.mfp-figure:after{
+	background: none;
+	border-color: $c-green;
+	box-shadow: none;
+}
+
+.mfp-counter{
+	color: rgba(#fff, 0.7);
+}
+
+.mfp-arrow-left,
+.mfp-arrow-right{
+	color: $c-green;
+	opacity: 1;
+	&:hover{
+		&:before{
+			color: $c-darkgreen;
+		}
+	}
+
+}
+
+.mfp-bg{
+	&.mfp-moment,
+	&.mfp-velocity{
+		background: lighten($c-lightgreen, 8%) url("../images/light-pattern.jpg") repeat;
+		//background: $c-green;
+		opacity: 1;
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $c-green;
+			opacity: 0.1;
+		}
+	}
+}
+
+.mfp-close{
+	opacity: 1;
+	&:before{
+		color: $c-green;
+	}
+	&:hover:before{
+		color: $c-darkgreen;
+	}
+}
+
+.popup{
+	background: #fff;
+}
+
+.parsley-errors-list{
+	color: $c-green;
+}
+
+footer{
+	background: $c-green;
+	p{
+		color: #fff;
+		font-weight: bold;
+	}
+	.icon-heart{
+		color: #EC1C24;
+	}
+	a{ color: #fff; }
+}
+
+.ua-ie-9{
+	.banner__gradient{
+		background: rgba($c-green, 0.3);
+	}
+}
+
+@include susy-breakpoint($bp-small){
+	.slick-next,
+	.slick-prev,
+	.slick-next:focus,
+	.slick-prev:focus{
+		&:before{
+			color: $c-green;
+		}
+		&:hover{
+			background: none;
+			&:before{
+				color: $c-green;
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($bp-medium){
+	.slick-next,
+	.slick-prev,
+	.slick-next:focus,
+	.slick-prev:focus{
+		&:before{
+			color: $c-green;
+		}
+		&:hover{
+			background: none;
+			&:before{
+				color: $c-green;
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@import "_var.scss";
+
+/* ------------------------------------------------------------------------------------
+	Source:  http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+--------------------------------------------------------------------------------------*/
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin inline-block {
+	display: -moz-inline-stack;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+@function pow($number, $exp) {
+	$value: 1;
+		@if $exp > 0 {
+		@for $i from 1 through $exp {
+			$value: $value * $number;
+		}
+	}
+	@else if $exp < 0 {
+		@for $i from 1 through -$exp {
+			$value: $value / $number;
+		}
+	}
+	@return $value;
+}
+
+@function mspow($number){
+	$value: pow($ms-ratio, $number) * 1rem;
+	@return $value;
+}
+

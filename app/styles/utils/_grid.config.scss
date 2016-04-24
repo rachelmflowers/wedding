@@ -1,0 +1,71 @@
+/*--------------------------------------------
+	GRID AND BREAKPOINT CONFIGURATION
+	using Susy FTW!
+*--------------------------------------------*/
+
+/* SUSY SETUP */
+$susy-col: (
+	default: 12,
+	small: 4,
+	medium: 10
+);
+
+$sc-default: map-get($susy-col, default);
+$sc-small: map-get($susy-col, small);
+$sc-medium: map-get($susy-col, medium);
+
+$susy-small: (
+	columns: $sc-small,
+	column-width: 50px,
+	gutters: 30px/50px,
+	container: 480px,
+	gutter-position: inside-static,
+	box-sizing: border-box,
+	//debug: (
+    //    image: show,    
+    //    output: overlay,
+    //    toggle: top right
+    //)
+);
+
+$susy-medium: (
+	columns: $sc-medium,
+	column-width: 50px,
+	gutters: 30px/50px,
+	container: 960px,
+	gutter-position: inside-static,
+	box-sizing: border-box,
+	//debug: (
+    //    image: show,    
+    //    output: overlay,
+    //    toggle: top right
+    //)
+);
+
+$susy-default: (
+	columns: $sc-default,
+	column-width: 50px,
+	gutters: 40px/50px,
+	container: 1140px,
+	gutter-position: inside-static,
+	box-sizing: border-box,
+	//debug: (
+    //    image: show,    
+    //    output: overlay,
+    //    toggle: top right
+    //)
+);
+
+$susy-large: (
+	columns: $sc-default,
+	column-width: 50px,
+	gutters: 40px/50px,
+	container: 1380px,
+	gutter-position: inside-static,
+	box-sizing: border-box,
+	//debug: (
+    //   image: show,    
+    //    output: overlay,
+    //    toggle: top right
+    //)
+);

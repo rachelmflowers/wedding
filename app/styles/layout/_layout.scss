@@ -1,0 +1,841 @@
+.row{
+	@include container($susy-default);
+	@include susy-breakpoint($bp-small, $susy-small){
+		@include container($susy-small);
+	}
+	@include susy-breakpoint($bp-medium, $susy-medium){
+		@include container($susy-medium);
+	}
+	@include susy-breakpoint($bp-xxlarge, $susy-large){
+		@include container($susy-large);
+	}
+	//@extend %clearfix;
+}
+
+// ----------------------
+// LOADER
+// ----------------------
+.loading{
+	overflow: hidden;
+	body{
+		overflow: hidden;
+	}
+}
+.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	text-align: center;
+	.heartbeat-loader{
+		top: 50%;
+		text-indent: 0;
+		transform: rotate(0deg);
+		@include remunit((
+			width: 3.4375rem,
+	    	height: 4.6875rem
+		));
+	}
+	.heartbeat-loader:not(:required):after{
+		display: none;
+	}
+	.heartbeat-loader:not(:required):before{
+		@include remunit(font-size, mspow(3));
+		content: "\6e";
+		font-family: "lovebird" !important;
+	    font-style: normal !important;
+	    font-weight: normal !important;
+	    font-variant: normal !important;
+	    text-transform: none !important;
+	    speak: none;
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    border-radius: 0;
+	    width: auto;
+	    height: auto;
+	}
+}
+
+// ----------------------
+// BIG BANNER 
+// ----------------------
+
+.banner{
+	position: relative;
+	&__img,
+	&__gradient{
+		min-height: 320px;
+	}
+	&__img{
+		background-size: cover;
+		background-position: 80% 0;
+	}
+	&__gradient{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		@include remunit(padding, $default-line-height);
+	}
+	&__border{
+		height: 100%;
+		@include remunit(border-width, 2px);
+	}
+	&__text{
+		text-align: center;
+		img{
+			@include susy-breakpoint($bp-xxlarge){
+				width: 80%;
+			}
+		}
+	}
+	> .row{
+		@include vertical-align($position: absolute);
+		left: 0;
+		right: 0;
+	}
+	h1{
+		margin-top: 0;
+		@include remunit(margin-bottom, 1rem);
+		&.big{
+			margin-bottom: 0;
+			span{
+				font-weight: normal;
+			}
+		}
+	}
+	h2{
+		margin-top: 0;
+		@include remunit(margin-bottom, $default-line-height);
+	}
+}
+
+.mobile-nav{
+	display: none;
+	cursor: pointer;
+}
+
+#topnav,
+.topnav{
+	position: relative;
+	overflow: hidden;
+	.inner{
+		> ul{
+			list-style: none;
+			text-align: center;
+			margin: 0;
+			padding-left: 0;
+			position: relative;
+			li{
+				@extend %h3;
+				@include inline-block;
+				@include remunit((
+					margin-right: 3rem,
+					margin-left: 3rem
+				));
+				text-transform: uppercase;
+				font-weight: bold;
+				@include susy-breakpoint($bp-xlarge){
+					@include remunit((
+					margin-right: 2rem,
+					margin-left: 2rem
+				));
+				}
+			}
+		}
+	}
+	&.is_stuck{
+		z-index: 99;
+	}
+	.inner{
+		position: relative;
+		z-index: 9;
+	}
+	.blurred{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		filter: blur(6px);
+	}
+}
+
+// ----------------------
+// COUPLE
+// ----------------------
+
+section{
+	position: relative;
+}
+
+.section{
+	&__border{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		@include remunit((
+			padding: $default-line-height,
+			left: -2px // border-width
+		));
+		&:before{
+			content: "";
+			@include remunit(border-width, 0.125rem);
+			display: block;
+			border-style: solid;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		+ *{
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&__title{
+		text-align: center;
+		@include remunit(margin-bottom, 3*$default-line-height);
+		&:before,
+		&:after{
+			@include inline-block;
+			content: "h";
+			font-family: "lovebird" !important;
+		    font-style: normal !important;
+		    font-weight: normal !important;
+		    font-variant: normal !important;
+		    text-transform: none !important;
+		    speak: none;
+		    line-height: 1;
+		    position: relative;
+		    top: 10px;
+		}
+		&:before{
+			margin-right: 20px;
+		}
+		&:after{
+			margin-left: 20px;
+			transform: scale(-1, 1);
+		}
+	}
+}
+
+section{
+	@include remunit(padding, 2*$default-line-height 0);
+}
+
+.couple{
+	&__part{
+		text-align: center;
+		@include remunit(margin-bottom, $default-line-height);
+		h3{
+			margin-top: 0;
+			@include remunit(margin-bottom, 2*$default-line-height);
+		}
+		h2{
+			@include remunit(margin-top, $default-line-height);
+		}
+	}
+	&__photo{
+		@include remunit((
+			border-width: 0.125rem,
+			padding: 0.9375rem
+		));
+		border-style: solid;
+		text-align: center;
+		margin: 0 auto;
+		img{
+			vertical-align: middle;
+			border-radius: 100%;
+			width: 100%;
+		}
+	}
+	&__history{
+		text-align: center;
+	}
+}
+
+.social{
+	list-style: none;
+	padding: 0;
+	li{
+		@include inline-block;
+		margin-left: 5px;
+		margin-right: 5px;
+		a{
+			@include remunit(font-size, mspow(1)/1.2);
+			text-decoration: none;
+			&:before{
+				line-height: inherit;
+			}
+		}
+	}
+}
+
+
+// ----------------------
+// PROPOSAL
+// ----------------------
+
+.carousel{
+	overflow-x: hidden;
+	&__content{
+		outline: none;
+		//opacity: 0.8;
+		//filter: blur(2px);
+		transition: 400ms;
+		img{
+			display: block;
+			width: 100%;
+		}
+		&__wrapper{
+			> a{
+				display: block;
+				position: relative;
+				&:before,
+				&:after{
+					transition: 400ms;
+				}
+				&:hover:before{
+					transform: scale(1);
+				}
+				&:hover:after{
+					opacity: 1;
+				}
+				&:before{
+					content:"";
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					transform: scale(0);
+				}
+				&:after{
+					content:"j";
+					@include vertical-align($position: absolute);
+					@include remunit(font-size, ms(1));
+					color: #fff;
+					font-family: "lovebird" !important;
+				    font-style: normal !important;
+				    font-weight: normal !important;
+				    font-variant: normal !important;
+				    text-transform: none !important;
+				    speak: none;
+				    line-height: 1;
+				    text-align: center;
+					width: 100%;
+					opacity: 0;
+				}
+			}
+		}
+		&__text{
+			@include remunit(padding-top, $default-line-height);
+			padding-left: 18px;
+			padding-right: 18px;
+			padding-bottom: 18px;
+			:last-child{
+				margin-bottom: 0;
+			}
+			h3{
+				margin-top: 0;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+	.slick-slide{
+		&.carousel__content{
+			transform: scaleY(0.9);
+			opacity: 0.5;
+			//filter: blur(5px);
+		}
+	}
+	.slick-active{
+		&.carousel__content{
+			transform: scale(0.9);
+			opacity: 0.5;
+			//filter: blur(5px);
+		}
+	}
+	.slick-center,
+	.slick-current{
+		&.carousel__content{
+			transform: scale(1);
+			opacity: 1;
+			//filter: blur(0);
+		}
+	}
+}
+
+.slick-next{
+	right: 0;
+	&:before{
+		content:"f";
+	}
+}
+.slick-prev{
+	left: 0;
+	z-index: 9;
+	&:before{
+		content:"g";
+	}
+}
+.slick-next,
+.slick-prev,
+.slick-next:focus,
+.slick-prev:focus{
+	width: 80px;
+	height: 90%;
+	top: 5%;
+	margin-top: 0;
+	transition: 400ms;
+	&:before{
+		font-family: "lovebird" !important;
+	    font-style: normal !important;
+	    font-weight: normal !important;
+	    font-variant: normal !important;
+	    text-transform: none !important;
+	    speak: none;
+	    line-height: 1;
+	    opacity: 1;
+	    @include remunit(font-size, pow(1.5, 2)*1rem); 
+	}
+}
+
+// ----------------------
+// WEDDING
+// ----------------------
+
+.wedding{
+	&__part{
+		@include remunit((
+			margin-top: $default-line-height,
+			margin-bottom: 2*$default-line-height
+		));
+		h3{
+			@include remunit(margin-bottom, 2*$default-line-height);
+		}
+		h2{
+			@include remunit(margin-top, $default-line-height);
+			+ h3{
+				@include remunit(margin-bottom, $default-line-height);
+			}
+		}
+		.button{
+			@include remunit(margin-top, $default-line-height);
+		}
+	}
+}
+
+// ----------------------
+// ACCOMODATIONS
+// ----------------------
+
+#accommodations,
+.accommodations{
+	.pws_tabs_container{ 
+		.pws_tabs{
+			&_controll{
+				text-align: center;
+				li{
+					margin: 0 10%;
+					a{
+						@extend %h3;
+						@include inline-block;
+						@include remunit(padding-bottom, $default-line-height);
+						margin-top: 0;
+						padding-top: 0;
+						text-transform: uppercase;
+						font-weight: bold;
+						position: relative;
+						background: none;
+						&:after{
+							content: "";
+							@include remunit(border-bottom-width, 0.125rem);
+							@include inline-block;
+							border-bottom-style: solid;
+							width: 46px;
+							position: absolute;
+							bottom: 0;
+							left: 50%;
+							margin-left: calc(-46px/2);
+							opacity: 0;
+							transition: 400ms;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.accommodations{
+	&__tab{
+		position: relative;
+		background: none;
+	}
+	/*
+	&__nav{
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		li{
+			@include inline-block;
+			margin: 0 10%;
+		}
+		a{
+			@extend %h3;
+			@include inline-block;
+			@include remunit(padding-bottom, $default-line-height);
+			text-transform: uppercase;
+			font-weight: bold;
+			position: relative;
+			&:after{
+				content: "";
+				@include remunit(border-bottom-width, 2px);
+				@include inline-block;
+				border-bottom-style: solid;
+				width: 46px;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: calc(-46px/2);
+				opacity: 0;
+				transition: 400ms;
+			}
+		}
+	}
+	*/
+	&__content{
+		padding: 0;
+	}
+	&__slide{
+		&__content{
+			.link{
+				@include remunit(margin-top, 2*$default-line-height);
+				text-align: right;
+				overflow-y: auto;
+				:first-child{
+					float: left;
+				}
+				a{
+					@include inline-block;
+				}
+				> :not(:first-child){
+					@include remunit(margin-top, 0.5*$default-line-height);
+				}
+			}
+			.image-container{
+				@include remunit(margin-top, 2*$default-line-height);
+			}
+		}
+	}
+}
+
+// ----------------------
+// BEAUTIFUL MOMENTS
+// ----------------------
+
+.moments{
+	@include remunit(padding-bottom, $default-line-height);
+	&__item{
+		@include remunit(margin-bottom, 2*$default-line-height);
+		a:focus,
+		img:focus{
+			outline: none;
+		}
+	}
+}
+
+// ----------------------
+// AWESOME PEOPLE
+// ----------------------
+
+#people,
+.people{
+	h3{
+		@include remunit(margin-bottom, 2*$default-line-height);
+	}
+	.people{
+		&__list{
+			@include remunit(margin-bottom, $default-line-height);
+			h3{
+				margin-top: 0;
+				@include remunit(margin-bottom, $default-line-height);
+			}
+		}
+	}
+}
+.people{
+	&__list{
+		padding: 0;
+		list-style: none;
+		> li{
+			@extend %clearfix;
+			@include remunit(margin-bottom, $default-line-height);
+		}
+		h3{
+			font-family: $f-playfair;
+			text-transform: capitalize;
+		}
+	}
+	&__txtbottom{
+		@include remunit(margin-top, $default-line-height);
+	}
+}
+
+// ----------------------
+// GIFT REGISTRY
+// ----------------------
+
+.gift{
+	&__text{
+		@include remunit(margin-bottom, 3*$default-line-height);
+	}
+	&__carousel{
+		@include remunit(margin-bottom, 3*$default-line-height);
+		&__content{
+			@include remunit(padding, 0 60px);
+			img{
+				margin: 0 auto;
+			}
+		}
+		.slick-slide{
+			img{
+				margin: 0 auto;	
+			}
+		}
+		.slick-next{
+			right: -25px;
+		}
+		.slick-prev{
+			left: -25px;
+		}
+	}
+}
+
+// ----------------------
+// GIFT REGISTRY
+// ----------------------
+#rsvp,
+.rsvp{
+	h4{
+		@include remunit((
+			margin-top: 0,
+			margin-bottom: 3*$default-line-height
+		));
+	}
+}
+
+// ----------------------
+// FOOTER
+// ----------------------
+
+footer{
+	.icon-heart{
+		@include remunit(font-size, mspow(1)*0.75);
+		position: relative;
+		top: 3px;
+	}
+	.icon-lieur-logo{
+		@include remunit((
+			font-size: mspow(2)*1.2,
+			top: 1rem,
+			margin-top: -1.5625rem
+		));
+		@include inline-block;
+	    position: relative;
+	}
+}
+
+.popup{
+	padding: 40px 20px;
+	@extend %clearfix;
+	&__left,
+	&__right{
+		@include remunit(margin-bottom, 1.5rem);
+		> :first-child{
+			margin-top: 0;
+		}
+		> :last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.mfp-moment{
+	.mfp-content{
+		padding: 50px 0;
+	}
+}
+
+.mfp-content{
+	figcaption{
+		margin: 0;
+		line-height: 0;
+		&:before{
+			display: none;
+		}
+	}
+}
+
+/* ZOOM POPUP ANIMATION */
+.mfp-velocity .mfp-container,
+.mfp-velocity.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-velocity.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-velocity.mfp-ready.mfp-bg {
+    opacity: 1;
+}
+
+.mfp-velocity.mfp-removing .mfp-container,
+.mfp-velocity.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+
+button.mfp-arrow{
+	opacity: 1;
+	&:before{
+		opacity: 1;
+	}
+}
+.mfp-arrow-left:before, 
+.mfp-arrow-right:before{
+	border: none;
+	font-family: "lovebird" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    @include remunit(font-size, pow(1.5, 2)*1rem);
+}
+.mfp-arrow-left:before{
+	content: "g";
+}
+.mfp-arrow-right:before{
+	content: "f";
+}
+.mfp-arrow-left:after, 
+.mfp-arrow-left .mfp-a,
+.mfp-arrow-right:after, 
+.mfp-arrow-right .mfp-a{
+	border: none;
+	margin: 0;
+}
+
+.mfp-close{
+	font-size: 0;
+	color: transparent;
+	top: 20px;
+	right: 20px;
+	&:active{
+		top: 25px;
+	}
+	&:before{
+		content: "m";
+		font-family: "lovebird" !important;
+	    font-style: normal !important;
+	    font-weight: normal !important;
+	    font-variant: normal !important;
+	    text-transform: none !important;
+	    speak: none;
+	    line-height: 1;
+	    opacity: 1;
+	    @include remunit(font-size, pow(1.5, 2)*1rem);
+	}
+}
+
+.mfp-velocity{
+	.mfp-content{
+		.mfp-close{
+			display: none;
+		}
+	}
+	&.mfp-bg{
+		opacity: 0;
+	  	transition: all 0.3s ease-out;
+	}
+}
+
+.mfp-open .mfp-content {
+    animation-name: zoomfadeIn;
+    animation-duration: .5s;;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+}
+
+.mfp-open-next .mfp-content{
+	animation-name: rightfadeIn;
+    animation-duration: .5s;;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+}
+
+.mfp-open-prev .mfp-content{
+	animation-name: leftfadeIn;
+    animation-duration: .5s;;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+}
+
+.mfp-figure{
+	figure{
+		@include remunit(padding, 0.9375rem);
+	}
+	&:after{
+		border-style: solid;
+		@include remunit((
+			border-width: 0.125rem,
+			padding:  0.9375rem
+		));
+	}
+}
+
+// ----------------------
+// FORM VALIDATION
+// ----------------------
+
+.parsley-errors-list{
+	@include remunit(margin-top, -1.5rem);
+}
+
+
+// ----------------------
+// CSS HACK for IE
+// ----------------------
+
+.ua-ie{
+	font-feature-settings: normal;
+	.lomo{
+		&:after{
+			display: none;
+		}
+		&:hover:after{
+			display: none;
+		}
+	}
+}

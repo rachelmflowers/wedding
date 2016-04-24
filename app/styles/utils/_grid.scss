@@ -1,0 +1,76 @@
+/*--------------------------------------------
+	GRID AND BREAKPOINT CONFIGURATION
+	using Susy FTW!
+*--------------------------------------------*/
+
+@import "_grid.config.scss";
+
+@include susy-breakpoint($bp-large, $susy-default){
+	@for $i from 1 through map-get($susy, columns) {
+	  .default-#{$i} {
+	    @include span($i);
+	  }
+	  .default--push-#{$i} {
+	    @include push($i);
+	  }
+	  .default--pull-#{$i} {
+	    @include pull($i);
+	  }
+	}
+}
+
+@include susy-breakpoint($bp-small, $susy-small){
+	@for $i from 1 through map-get($susy-small, columns) {
+	  .small-#{$i} {
+	    @include span($i);
+	  }
+	  .small--push-#{$i} {
+	    @include push($i);
+	  }
+	  .small--pull-#{$i} {
+	    @include pull($i);
+	  }
+	}
+}
+
+@include susy-breakpoint($bp-medium, $susy-medium){
+	@for $i from 1 through map-get($susy-medium, columns) {
+	  .medium-#{$i} {
+	    @include span($i);
+	  }
+	  .medium--push-#{$i} {
+	    @include push($i);
+	  }
+	  .medium--pull-#{$i} {
+	    @include pull($i);
+	  }
+	}
+}
+
+@include susy-breakpoint($bp-xlarge, $susy-large){
+	@for $i from 1 through map-get($susy, columns) {
+	  .xlarge-#{$i} {
+	    @include span($i);
+	  }
+	  .xlarge--push-#{$i} {
+	    @include push($i);
+	  }
+	  .xlarge--pull-#{$i} {
+	    @include pull($i);
+	  }
+	}
+}
+
+@include susy-breakpoint($bp-xxlarge, $susy-large){
+	@for $i from 1 through map-get($susy, columns) {
+	  .xxlarge-#{$i} {
+	    @include span($i);
+	  }
+	  .xxlarge--push-#{$i} {
+	    @include push($i);
+	  }
+	  .xxlarge--pull-#{$i} {
+	    @include pull($i);
+	  }
+	}
+}

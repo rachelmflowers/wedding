@@ -1,0 +1,107 @@
+
+@import "bower_components/sass-rem/_rem.scss";
+@import "bower_components/modular-scale/stylesheets/_modular-scale.scss";
+
+// Responsive Base Font
+@mixin resbase($breakp, $base-font){
+	@include susy-breakpoint($breakp){
+		@content;
+	}
+}
+
+// OVERRIDE REM function on bower_components/sass-rem/_rem.scss
+// use responsive base-font size instead :)
+@mixin remunit($properties, $values...){
+	@each $breakp, $base-font in $break-bases{
+		@include resbase($breakp, $base-font){
+			$rem-baseline: $base-font !global;
+			$ms-base: $rem-baseline !global;
+			$rem-fallback: true !global;
+			$rem-px-only: false !global;
+
+			//@warn "$rem-baseline: " + $rem-baseline;
+
+			@if type-of($properties) == "map" {
+			    @each $property in map-keys($properties) {
+			      @include rem($property, map-get($properties, $property));
+			    } 
+			} @else {
+				@each $property in $properties {
+				    @if $rem-fallback or $rem-px-only {
+				        #{$property}: rem-convert(px, $values...);
+				    }
+				   	@if not $rem-px-only {
+				        #{$property}: rem-convert(rem, $values...);
+				    }
+				}
+			}
+		}
+	}
+}
+
+@each $breakp, $base-font in $break-bases{
+	@include resbase($breakp, $base-font){
+		$rem-baseline: $base-font !global;
+		$ms-base: $rem-baseline !global;
+		$rem-fallback: true !global;
+		$rem-px-only: false !global;
+		//@warn "$rem-baseline: " + $rem-baseline;
+
+		@each $size, $int in $mod-sizes{
+			%#{$size}{
+				@if $breakp == $bp-frommedium{
+					@if $int != 1{
+						@include rem((
+							font-size: ms($int),
+							margin-bottom: $default-line-height
+						));
+					} @else {
+						@include rem((
+							font-size: ms($int)/1.3,
+							margin-bottom: $default-line-height
+						));
+					}
+
+					@if $int > 0{
+						@include rem(line-height, $default-line-height * $int)
+					} @else {
+						@include rem(line-height, $default-line-height)
+					}
+				}
+
+				@if $int >= 2{
+					@include rem(margin-top, 2 * $default-line-height)
+				} @else {
+					@include rem(margin-top, 1 * $default-line-height)
+				}
+
+				// FOR SMALL DEVICE ($bp-small)
+
+				@if $breakp == $bp-small{
+					@include rem((
+						font-size: ms($int),
+						margin-bottom: $default-line-height
+					));
+					
+					
+					@if $size == "default"{
+						@include rem(font-size, ms($int)*1.4)
+					}
+
+					@if $int > 1{
+						@include rem(line-height, $default-line-height * $int)
+					} @else if $int == 1 {
+						@include rem(line-height, $default-line-height * 1.5)
+					} @else {
+						@include rem(line-height, 2rem)
+					}
+					
+				}
+			}
+		}
+
+	}
+}
+p, ul, ol, pre, .table-container, blockquote {
+	@extend %default;
+}

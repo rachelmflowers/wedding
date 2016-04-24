@@ -1,0 +1,132 @@
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "utils/_var.scss";
+@import "themes/_color-var-default.scss";
+@import "utils/_mixins.scss";
+@import "utils/_typography.scss";
+@import "utils/_animations.scss";
+@import "utils/_helper.scss";
+
+body{
+	padding-top: 3rem;
+}
+header{
+	background: rgba($c-green, 0.2);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	[class*="default-"]{
+		min-height: 0;
+		margin-bottom: 0;
+	}
+	ul{
+		list-style: none;
+		padding: 0;
+		text-align: right;
+		margin-bottom: 0;
+	}
+	li{
+		@include inline-block;
+		margin-right: 20px;
+		position: relative;
+		> a{
+			color: $c-darkgreen;
+			display: block;
+			padding-bottom: 1.5rem;
+			&:hover + .submenu{
+				display: block;
+			}
+		}
+		.submenu{
+			display: none;
+			position: absolute;
+			top: 100%;
+			margin-top: 0;
+			width: 150px;
+			background: $c-green;
+			text-align: left;
+			padding: 0 15px;
+			&:hover{
+				display: block;
+			}
+			li{
+				display: block
+			}
+			a{
+				color: #fff;
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+.no-bg{
+	[class*="default-"]{
+		background: none;
+		&:nth-child(even){
+			background: none;	
+		}
+	}
+}
+
+[class*="default-"]{
+	min-height: 6rem;
+	background: rgba(blue, 0.1);
+	margin-bottom: 1.5rem;
+	line-height: 1.5rem;
+	font-size: 12px;
+	&:nth-child(even){
+		background: rgba(red, 0.1);	
+	}
+}
+
+.box-color{
+	text-align: center;
+	[class*="box-color__"]{
+		min-height: 9rem;
+	}
+	&__c-green{
+		background: $c-green;
+	}
+	&__c-darkgreen{
+		background: $c-darkgreen;
+	}
+	&__c-lightgreen{
+		background: $c-lightgreen;
+	}
+	&__c-txtgreen{
+		background: $c-txtgreen;
+	}
+}
+
+.button{
+	margin-top: -4px;
+}
+
+.helperclass-table,
+.grid-table{
+	max-width: 800px;
+}
+
+.code{
+	font-family: 'Fira Mono';
+	color: $c-green;
+}
+
+.txtgreen{
+	color: $c-green;
+	em{
+		font-weight: bold;
+	}
+}
+
+.warning{
+	font-style: italic;
+	em{
+		font-weight: bold;
+		color: $c-green;
+	}
+}

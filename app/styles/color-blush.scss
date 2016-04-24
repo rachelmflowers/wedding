@@ -1,0 +1,427 @@
+@import "utils/_var.scss";
+@import "themes/_color-var-blush.scss";
+
+body{
+	color: $c-txtpink;
+}
+
+a{
+	color: $c-pink;
+	text-decoration: none;
+	transition: 400ms;
+	&:hover{
+		color: $c-darkpink;
+	}
+}
+
+h1, h2, h3{
+	color: $c-darkpink;
+}
+
+.mobile-nav{
+	color: #fff;
+	span{
+		background: rgba($c-pink, 0.8);
+	}
+}
+
+.loader{
+	background: $c-pink;
+	.heartbeat-loader:not(:required):after, 
+	.heartbeat-loader:not(:required):before{
+		background: none;
+		color: $c-lightpink;
+	}
+}
+
+form{
+	input[type='text'], input[type='email'], input[type='password'], textarea{
+		box-shadow: 0 0 5px rgba($c-pink, 0);
+		border: 1px solid rgba($c-pink, 0);
+		&:focus{
+			outline: none;
+			border: 1px solid rgba($c-pink, 1);
+			box-shadow: 0 0 5px rgba($c-pink, 1);
+		}
+	}
+}
+
+.image-container{	
+	a{
+		&:hover:before{
+			background: rgba($c-pink, 0.8);
+		}
+		&:before{
+			background: rgba($c-pink, 0);
+		}
+	}
+}
+
+.button{
+	border-color: $c-pink;
+	color: $c-pink;
+	background: none;
+	&:hover{
+		background: $c-pink;
+		color: #fff;
+		border-color: $c-pink;
+	}
+}
+
+.banner{
+	&__gradient{
+		background-image: linear-gradient(to right, $c-pink 37.5%, rgba($c-pink, 0));
+		opacity: 0.8;
+	}
+	&__border{
+		border-style: solid;
+		border-color: #fff;
+	}
+	h1, h2{
+		color: #fff;
+	}
+	h2{
+		font-family: $f-sourcesanpro;
+		text-transform: uppercase;
+	}
+}
+
+#topnav,
+.topnav{
+	background: rgba($c-pink, 0.8);
+	.inner{
+		background: rgba($c-pink, 0.8);
+		a{
+			color: #fff;
+			transition: 400ms;
+			&:hover{
+				color: $c-darkpink;
+			}
+		}
+		li.current{
+			a{
+				color: $c-darkpink;
+			}
+		}
+	}
+}
+
+.lomo{
+	position: relative;
+	&:after{
+		content: '';
+	    height: 100%;
+	    width: 100%;
+	    position: absolute;
+	    display: block;
+	    top: 0;
+	    left: 0;
+	    border-radius: 100%;
+	    background: 
+	    	radial-gradient(160px circle at 30% 10%, #FFB100, rgba(255, 255, 255, 0)), 
+	    	radial-gradient(300px circle at 80% 60%, #4DC28E, rgba(255, 255, 255, 0));
+	    mix-blend-mode: overlay;
+	    opacity: 0;
+	    transition: 400ms;
+	}
+	&:hover:after{
+		opacity: 1;
+	}
+}
+
+.lightbg{
+	background: lighten(beige, 8%) url("../images/light-pattern.jpg") repeat;
+	&--green{
+		background: lighten($c-lightpink, 15%) url("../images/light-pattern.jpg") repeat;
+		position: relative;
+		>*{
+			position: relative;
+			z-index: 1;
+		}
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $c-pink;
+			opacity: 0.1;
+		}
+	}
+}
+
+.darkbg{
+	background: lighten($c-darkpink, 3%) url("../images/dark-pattern.jpg") repeat;
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: lighten($c-darkpink, 3%);
+		opacity: 0.15;
+	}
+	.section{
+		&__title{
+			color: #fff;
+		}
+	}
+	h2, h3, h4, p, .button{
+		color: #fff;
+	}
+
+	form{
+		label{
+			> span{
+				color: #fff;
+			}
+		}
+	}
+}
+
+.section{
+	&__border{
+		&:before{ border-color: $c-pink; }
+	}
+	&__title{
+		&:before,
+		&:after{
+			color: $c-pink;
+		}
+	}
+}
+
+
+.couple{
+	&__photo{
+		border-color: $c-pink;
+	}
+}
+
+.social{
+	li{
+		a{
+			transition: 400ms;
+			color: $c-pink;
+			&:before{
+				//color: $c-pink;
+			}
+			&:hover{
+				color: $c-darkpink;
+			}
+		}
+	}
+}
+
+.carousel{
+	&__content{
+		&__wrapper{
+			> a{
+				&:hover:before{
+					background: rgba($c-pink, 0.8);
+				}
+				&:before{
+					background: rgba($c-pink, 0);
+				}
+			}
+		}
+		&__text{
+			background: #fff;
+		}
+	}
+}
+
+.image-container,
+.image-border{
+	border-color: $c-pink;
+}
+
+#accommodations,
+.accommodations{
+	.pws_tabs_container{
+		.pws_tabs{
+			&_controll{
+				li{
+					a{
+						color: $c-darkpink;
+						&.pws_tab_active{
+							background: none;
+							&:after{
+								border-color: $c-pink;
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.accommodations{
+	&__content{
+		h2{
+			color: $c-darkpink;
+		}
+	}
+}
+
+.gift{
+	&__carousel{
+		.slick-next, 
+		.slick-prev, 
+		.slick-next:focus, 
+		.slick-prev:focus{
+			background: none;
+			&:hover{
+				background: none;
+			}
+		}
+		.slick-next, .slick-prev{
+			&:before{
+				color: $c-pink;
+				transition: 400ms;
+			}
+			&:hover{
+				&:before{
+					color: $c-lightpink;
+				}
+			}
+		}
+	}
+}
+
+.slick-initialized .slick-slide{
+	outline: none;
+}
+
+.slick-next,
+.slick-prev,
+.slick-next:focus,
+.slick-prev:focus{
+	background: rgba($c-pink, 0.8);
+	&:hover{
+		background: rgba($c-pink, 1);
+	}
+}
+
+.mfp-bg{
+	background: $c-pink;
+	opacity: 0.5;
+}
+
+.mfp-figure:after{
+	background: none;
+	border-color: $c-pink;
+	box-shadow: none;
+}
+
+.mfp-counter{
+	color: rgba(#fff, 0.7);
+}
+
+.mfp-arrow-left,
+.mfp-arrow-right{
+	color: $c-pink;
+	opacity: 1;
+	&:hover{
+		&:before{
+			color: $c-darkpink;
+		}
+	}
+
+}
+
+.mfp-bg{
+	&.mfp-moment,
+	&.mfp-velocity{
+		background: lighten($c-lightpink, 8%) url("../images/light-pattern.jpg") repeat;
+		//background: $c-pink;
+		opacity: 1;
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $c-pink;
+			opacity: 0.1;
+		}
+	}
+}
+
+.mfp-close{
+	opacity: 1;
+	&:before{
+		color: $c-pink;
+	}
+	&:hover:before{
+		color: $c-darkpink;
+	}
+}
+
+.popup{
+	background: #fff;
+}
+
+.parsley-errors-list{
+	color: $c-pink;
+}
+
+footer{
+	background: $c-pink;
+	p{
+		color: #fff;
+		font-weight: bold;
+	}
+	.icon-heart{
+		color: $c-darkpink;
+	}
+	a{ color: #fff; }
+}
+
+.ua-ie-9{
+	.banner__gradient{
+		background: rgba($c-pink, 0.3);
+	}
+}
+
+@include susy-breakpoint($bp-small){
+	.slick-next,
+	.slick-prev,
+	.slick-next:focus,
+	.slick-prev:focus{
+		&:before{
+			color: $c-pink;
+		}
+		&:hover{
+			background: none;
+			&:before{
+				color: $c-pink;
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($bp-medium){
+	.slick-next,
+	.slick-prev,
+	.slick-next:focus,
+	.slick-prev:focus{
+		&:before{
+			color: $c-pink;
+		}
+		&:hover{
+			background: none;
+			&:before{
+				color: $c-pink;
+			}
+		}
+	}
+}
