@@ -1,5 +1,13 @@
 @import "bower_components/susy/sass/_susy.scss";
 
+
+$c-green: #1A2C47;
+$c-darkgreen: #1A2C47;
+$c-lightgreen: #8EA2AE;
+$c-txtgreen: #AFC2A6;
+$c-greenpattern: #AFC2A6;
+$c-copper: #894E30;
+
 /* ===================================== 
 	BREAKPOINT RANGE SETUP 
 ----------------------------------------- */
@@ -48,10 +56,10 @@ $small-line-height: 1.2rem;
 // http://www.gridlover.net/app/ with setting -> Font Size: 16px - Line Height: 1.5 - Scale Factor: 1.5
 // EDIT -> using MODULARE SCALE CONFIG; add $xx-ms-var and ms();
 $mod-sizes: (
-	big: 4,
+	big: 3.5,
 	h1: 3,
 	h2: 2,
-	h3: 1,
+	h3: 1.5,
 	h4: 1,
 	default: 0,
 	small: 0
@@ -68,5 +76,9 @@ $break-bases: (
 // FONT VARIABLE
 /*------------------------------------------------------------*/
 
-$f-playfair: 'Playfair Display', serif;
+@import "../base/fonts";
+
+$f-playfair: 'pillowbook', serif;
+$f-ornaments: 'pillowbookornaments', serif;
 $f-sourcesanpro: 'Source Sans Pro', sans-serif;
+$f-woodcabin: 'woodcabin', sans-serif;

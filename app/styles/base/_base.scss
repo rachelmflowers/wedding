@@ -27,23 +27,41 @@ body{
 h1{ 
 	@extend %h1; 
 	font-family: $f-playfair;
-	font-style: italic;
+
 	&.big{
 		@extend %big;
-		font-style: normal;
 	}
+
+    span {
+        font-family: $f-ornaments;
+    }
 }
 h2{ 
 	@extend %h2;
 	font-family: $f-playfair;
+
+    span { font-family: $f-ornaments;}
 }
 h3{ 
-	@extend %h3; 
-	text-transform: uppercase;
+	@extend %h3;
+	font-family: $f-woodcabin;
+    letter-spacing: 1.5px;
+
+    span {
+        font-family: 'frenchpress';
+        font-size: 1.3em;
+    }
 }
 h4{ 
 	@extend %h4;
 	font-weight: normal;
+	font-family: $f-woodcabin;
+    letter-spacing: 1.5px;
+
+    span {
+        font-family: 'frenchpress';
+        font-size: 1.3em;
+    }
 }
 
 a{ 

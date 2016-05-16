@@ -2,15 +2,14 @@ extends layouts/default
 
 block content
   #top.banner
-    .banner__img(style="background-image: url(images/loriandkeet.jpg)")
+    .banner__img(style="background-image: url(images/rachelandtim.jpg)")
     .banner__gradient
       .banner__border
     .row
-      .banner__text.default-6.small-4.xxlarge-7
-        h1.big Lori <span>&</span> Keet
-        h1 are getting hitched
-        h2 January 1, 2016
-        img(src="images/ornamen.svg", alt="Love")
+      .banner__text.default-7.small-4.xxlarge-8
+        h1 Rachel <span>c</span> Tim
+        h2 are tying the knot
+        img(src="images/ornament.svg", alt="Love")
   //#top.banner
 
   nav#topnav
@@ -19,7 +18,7 @@ block content
     .inner
       span.mobile-nav 
         span Menu
-      ul.close
+      ul
         li(style={display: 'none'}): a(href="#top") &nbsp;
         li: a(href="#couple") The Couple
         li: a(href="#wedding") The Wedding
@@ -29,134 +28,146 @@ block content
   //#topnav
   
   #content
-    section#couple.couple.lightbg
+    section#couple.couple
       .row
         h1.section__title The Couple
         .couple__part.default-6.small-4.medium-5
-          h3 The Bride
+          h1 <span>d</span>
           .couple__photo.set-height-8x.set-width-8x.full-rounded.lomo
             picture
               //if IE 9
                 video(style="display: none;")
               source(srcset="images/couple-1@2x.jpg", media="(min-width: 1281px)")
               //if IE 9
-              img(srcset="images/couple-1.jpg, images/couple-1@2x.jpg 2x", alt="Lori Johansson")
-          h2 Lori Johansson
-          p Lori Johansson grew up in the Bay Area, spending much of her childhood in Palo Alto and Cupertino. She studied at Harvard and worked in New York for two years before going to get her MBA at INSEAD in Fontainebleau. Today, she works as an associate at Washburne Ventures in London.
-          ul.social
-            li
-              a(href="#").icon-facebook
-            li
-              a(href="#").icon-twitter
-            li
-              a(href="#").icon-google
-            li
-              a(href="#").icon-instagram
-            li
-              a(href="#").icon-link
+              img(srcset="images/couple-1.jpg, images/couple-1@2x.jpg 2x", alt="Rachel Flowers")
+          h2 Rachel Flowers
+          p Rachel Flowers grew up in Saint Johns, MI until she moved to Grand Rapids to attend Kendall College of Art and Design, where she received her BFA in Visual Communications. Today, she works as a frontend developer at DDM Marketing and Communications.
         //.couple__part
 
         .couple__part.default-6.small-4.medium-5
-          h3 The Groom
+          h1 <span>e</span>
           .couple__photo.set-height-8x.set-width-8x.full-rounded.lomo
             picture
               //if IE 9
                 video(style="display: none;")
               source(srcset="images/couple-2@2x.jpg", media="(min-width: 1281px)")
               //if IE 9
-              img(srcset="images/couple-2.jpg, images/couple-2@2x.jpg 2x", alt="Keet Reeves")
-          h2 Keet Reeves
-          p Keet Reeves was born in Washington and spent much of his life in Milan, moving to Paris at the age of 18 to study fine art at the École des Beaux-Arts. His work is known for blurring the line between technology and art and has been selected for display at exhibitions in Paris, Shanghai, and New York.
-          ul.social
-            li
-              a(href="#").icon-facebook
-            li
-              a(href="#").icon-twitter
-            li
-              a(href="#").icon-google
-            li
-              a(href="#").icon-instagram
-            li
-              a(href="#").icon-link
+              img(srcset="images/couple-2.jpg, images/couple-2@2x.jpg 2x", alt="Tim Spitler")
+          h2 Timothy Spitler
+          p Tim, born and raised in Rockford, MI, spent most of his life working with his parents, which he loved. When they decided they wanted to retire, Tim was on the hunt for his next big gig. Now Tim gets to spend his days playing with "big boy toys" working for Vermeer.
         //.couple__part
 
       .row
-        .couple__history.default-6.small-4.medium-8.center-block
-          h4 We met in 2009, at a backpacker hostel in Amsterdam. We hit it off immediately, bonding over our love of Gauguin and jazz. We had a magical time together in France during Lori's first year at grad school, and we both knew it was time. We were engaged in March 2014, and now we're getting married!
+        .couple__history.default-8.small-6.medium-10.center-block
+          h4 We met through a mutual friend, and at first we had no interest in dating each other. However, it was winter time at the rental shop and Tim was endlessly bored. Having met a new friend he decided to text Rachel ALL DAY long, every day. Although this wasn't so bad, as we seemed to have an endless amount of things to talk to each other about. As we got to know each other, we realized that what we had been searching for in romance, was right in front of us. We spent the next year adventuring and falling madly in love. We were engaged in October <span>2015</span>, and now we're getting married!
     //#couple
 
     section#proposal.proposal.lightbg--green
       .row
-        h1.section__title Sweet Proposal
+        h1.section__title The Perfect Proposal
       .carousel
         .carousel__content.default-4.small-4.medium-5
           .carousel__content__wrapper
-            a(href="#bm-popup-1").open-inline-popup
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/moments-1-thumb@2x.jpg", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/moments-1-thumb.jpg, images/moments-1-thumb@2x.jpg 2x", alt="Lunch at Ponte Vecchio")
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/convertible.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/convertible.jpg, images/convertible.jpg 2x", alt="Chilly Convertible Ride")
             .carousel__content__text
-              h3 Piggyback!
-              p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy… 
+              h4 Chilly Convertible Ride!
+              p It might of snowed the night before on the way up to Harbor Springs, but that didn't stop us from putting the top down.
         //.carousel__content
 
         .carousel__content.default-4.small-4.medium-5
           .carousel__content__wrapper
-            a(href="#bm-popup-2").open-inline-popup
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/moments-2-thumb@2x.jpg", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/moments-2-thumb.jpg, images/moments-2-thumb@2x.jpg 2x", alt="Then, we took a ride ...")
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/tunneloftrees1.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/tunneloftrees1.jpg, images/tunneloftrees1.jpg 2x", alt="The Tunnel of Trees")
             .carousel__content__text
-              h3 Lunch at Ponte Vecchio
-              p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy… 
+              h4 The Tunnel of Trees
+              p The sun was shining and the colors were beautiful. Even with the 50 degree temps, with the windows up and the heat on, it was perfect.
         //.carousel__content
 
         .carousel__content.default-4.small-4.medium-5
           .carousel__content__wrapper
-            a(href="#bm-popup-3").open-inline-popup
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/moments-3-thumb@2x.jpg", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/moments-3-thumb.jpg, images/moments-3-thumb@2x.jpg 2x", alt="...to the sea!")
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/tunneloftrees.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/tunneloftrees.jpg, images/tunneloftrees.jpg 2x", alt="A perfect day")
             .carousel__content__text
-              h3 Then, we took a ride ...
-              p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy… 
+              h4 A Perfect Day
+              p We stopped along the way at an antique shop, drank some hot spiced cider, and enjoyed some bluegrass musicians at a small general store where we grabbed some snacks.
         //.carousel__content
 
         .carousel__content.default-4.small-4.medium-5
           .carousel__content__wrapper
-            a(href="#bm-popup-2").open-inline-popup
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/moments-4-thumb@2x.jpg", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/moments-4-thumb.jpg, images/moments-4-thumb@2x.jpg 2x", alt="Lunch at Ponte Vecchio")
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/thetrees.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/thetrees.jpg, images/thetrees.jpg 2x", alt="Wilderness State Park")
             .carousel__content__text
-              h3 ...to the sea!
-              p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy… 
+              h4 Wilderness State Park
+              p Tim then said he wanted to go visit the point in Wilderness State Park, I was a little suspicious ...
         //.carousel__content
 
         .carousel__content.default-4.small-4.medium-5
           .carousel__content__wrapper
-            a(href="#bm-popup-1").open-inline-popup
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/moments-6-thumb@2x.jpg", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/moments-6-thumb.jpg, images/moments-6-thumb@2x.jpg 2x", alt="Lunch at Ponte Vecchio")
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/thebeach.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/thebeach.jpg, images/thebeach.jpg 2x", alt="The Point")
             .carousel__content__text
-              h3 He proposed!
-              p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy… 
+              h4 The Point
+              p While trying to find the perfect time to purpose, Tim threw the ring over his shoulder into the rocks, thinking it would be a good excuse to get down on one knee. As soon as he let if fly he realized that was a terrible idea and had no idea where it went. He told me to "look for cool rocks for the fish tank" while he frantically searched.
+        //.carousel__content
+
+        .carousel__content.default-4.small-4.medium-5
+          .carousel__content__wrapper
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/standingstump.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/standingstump.jpg, images/standingstump.jpg 2x", alt="The Stump")
+            .carousel__content__text
+              h4 The Stump
+              p In my search for cool rocks I saw this awesome stump, after investigating it I decided to go out to the water. Tim had found the ring and realized that this was the spot, he placed the ring in the base of the stump and the asked me to come back to "stand on it so I can take a picture".
+        //.carousel__content
+
+        .carousel__content.default-4.small-4.medium-5
+          .carousel__content__wrapper
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/gotthering.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/gotthering.jpg, images/gotthering.jpg 2x", alt="Oh Look! A cool rock!")
+            .carousel__content__text
+              h4 Oh look! A cool rock!
+              p After taking the picture he says "oh wait, look at this cool rock" where he went down and grabbed the ring from the stump, I had no idea what was going on until I saw something blue and sparkly in his hand, which I then proceed to scream, and then cry with joy!
+        //.carousel__content
+
+        .carousel__content.default-4.small-4.medium-5
+          .carousel__content__wrapper
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/wereengaged.jpg", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/wereengaged.jpg, images/wereengaged.jpg 2x", alt="He Proposed")
+            .carousel__content__text
+              h4 He Proposed!
+              p I of course said YES! We tried to get the mackinaw bridge in our happy "we're engaged" obligatory facebook photo post! And here we are now, about to begin our life full of adventures and "rock finding" together!
         //.carousel__content
 
       //.carousel
@@ -167,50 +178,34 @@ block content
       .row
         h1.section__title The Wedding
         .default-6.small-4.medium-8.center-block.center-text
-          h4 We cordially invite you to join us in our wedding celebration! The wedding will be held on Friday, January 1, 2016. We'll start with the ceremony, then move to the restaurant for the reception. Dress code will be black, tie is optional.
-        .wedding__part.default-6.small-4.medium-10.center-text
-          h3 Ceremony
+          h4 We cordially invite you to join us in our wedding celebration! The wedding will be held on Saturday, September <span>10, 2016.</span> We'll start with the ceremony, then move to the backyard for the reception. Dress code will be dressy casual.
+        .wedding__part.default-8.small-6.medium-12.center-block.center-text
+          h2 Ceremony <span>b</span> Reception
           .image-container
-            a(href="images/wedding-1@2x.jpg").image-popup.no-gallery
+            a(href="images/wedding-3@2x.jpg").image-popup.no-gallery
               picture
                 //if IE 9
                   video(style="display: none;")
-                source(srcset="images/wedding-1@2x.jpg", media="(min-width: 1281px)")
+                source(srcset="images/wedding-3@2x.jpg", media="(min-width: 1281px)")
                 //if IE 9
-                img(srcset="images/wedding-1.jpg, images/wedding-1@2x.jpg 2x", alt="Hotel Zugspitze, Garmisch-Partenkirchen, Germany")
-          h2 Hotel Zugspitze, <br>Garmisch-Partenkirchen, Germany
-          h3 FRIDAY, JANUARY 1, 2016 at 4:00 PM
-          p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy canes cheesecake gummies candy. Jelly-o marzipan icing sugar plum cookie cookie candy canes pie. Croissant fruitcake cake bonbon cake I love I love ice cream
-          a(href="#").button Check the Map
-        //.wedding__part
-
-        .wedding__part.small-4.default-6.medium-10.center-text
-          h3 Reception
-          .image-container
-            a(href="images/wedding-2@2x.jpg").image-popup.no-gallery
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/wedding-2@2x.jpg", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/wedding-2.jpg, images/wedding-2@2x.jpg 2x", alt="Joseph Naus Stub'n Resto, Garmisch-Partenkirchen, Germany")
-          h2 Joseph Naus Stub'n Resto, <br>Garmisch-Partenkirchen, Germany
-          h3 FOLLOWING THE CEREMONY
-          p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy canes cheesecake gummies candy. Jelly-o marzipan icing sugar plum cookie cookie candy canes pie. Croissant fruitcake cake bonbon cake I love I love ice cream
-          a(href="#").button Check the Map
+                img(srcset="images/wedding-3.jpg, images/wedding-3@2x.jpg 2x", alt="Barry and Lynette's")
+          h3 Barry <span>&</span> Lynette<span>'</span>s, <br>Saint Johns, Michigan
+          h4 Saturday, September <span>10, 2016</span> <br> Ceremony at <span>4:00</span> PM, Reception at <span>6:00</span> PM
+          p The ceremony and reception will be held at Rachel's parents house in St. Johns. Ceremony will begin in the front yard by the pond, and the Reception will be at back of the house in the tent. Parking will be available on site. Guests are also welcome to bring a tent to pitch in the woods if they would like to spend the night on property.
+          a(href="https://goo.gl/maps/aiEJxWL3a7p" target="_blank").button Check the Map
         //.wedding__part
     //#wedding
 
     section#accommodations.accommodations.lightbg
       .row
         h1.section__title Accommodations
-        .accommodations__tab
-          .accommodations__content
-            div(data-pws-tab="tab-1", data-pws-tab-name="Where to stay") 
-              .default-6.small-4.medium-8.center-block.center-text
-                h4 We have rooms blocked off for wedding guests at Hotel Zugspitze and several other guest houses near the area. Several types of rooms will be available, so rates will vary. Mention the Lori-Keet wedding when you book to get the group discount.
-              .accommodations__slide
-                .accommodations__slide__content
+        .accommodations__content
+          .default-6.small-4.medium-8.center-block.center-text
+            h4 We have rooms blocked off for wedding guests at The Sleep Inn, in DeWitt. Mention the Flowers/Spitler wedding when you book. Alternately, you may get a room if available at the St. Johns Motel. Both locations are about a <span>12</span> minute drive from the wedding site.
+            h4 Or, if you are feeling adventureous<span>/</span>do not wish to drive, you may set up a tent on the wedding site property. Please notify us in advance if you want to pitch a tent.
+          .accommodations__slide
+            .accommodations__slide__content
+                .row
                   .default-6.small-4.medium-5.last
                     .image-container
                       a(href="images/wedding-1@2x.jpg").image-popup.no-gallery
@@ -219,40 +214,34 @@ block content
                             video(style="display: none;")
                           source(srcset="images/wedding-1@2x.jpg", media="(min-width: 1281px)")
                           //if IE 9
-                          img(srcset="images/wedding-1.jpg, images/wedding-1@2x.jpg 2x", alt="Hotel Zugspitze, Garmisch-Partenkirchen, Germany")
+                          img(srcset="images/wedding-1.jpg, images/wedding-1@2x.jpg 2x", alt="Sleep Inn Hotel")
                   .default-6.small-4.medium-5.first
-                    h2 Hotel Zugspitze, <br>Garmisch-Partenkirchen, Germany
-                    p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy canes cheesecake gummies candy. Jelly-o marzipan icing sugar plum cookie cookie candy canes pie. Croissant fruitcake cake bonbon cake I love I love ice cream.
+                    h2 The Sleep Inn Hotel
+                    p 1101 Commerce Park Dr<br> Dewitt, MI 48820<br /> Phone: (517) 669-8823
+                    a(href="https://goo.gl/maps/RGp2oYt2tZw" target="_blank").default Check The Map → <br /><br />
                     .link
-                      a(href="#").button Make Reservations
-                      a(href="#").default Check The Map → 
-                //.accommodations__slide__content
-              //.accommodations__slide
+                     a(href="https://www.choicehotels.com/michigan/dewitt/sleep-inn-hotels/mi701?source=gglocaljn" target="_blank").button Make Reservations
 
-            div(data-pws-tab="tab-2", data-pws-tab-name="What to do") 
-              .default-6.small-4.medium-8.center-block.center-text
-                h4 Garmisch-Partenkirchen is a German ski resort town that lies near the Zugspitze, Germany's highest peak, with a 2,962m summit accessed by cogwheel train and cable car. You would love to check its interesting local events such as winter sports, or try alpine hiking.
-              .accommodations__slide
-                .accommodations__slide__content
-                  .default-6.small-4.medium-5
+                .row <br />
+                  .default-6.small-4.medium-5.last
+                    h2 Saint Johns Motel
+                    p 1212 Old U.S. 27,<br> St Johns, MI 48879<br />Phone: (989) 224-2321
+                    a(href="https://goo.gl/maps/bzhtekWj3pS2" target="_blank").default Check The Map → <br /><br />
+                    .link
+                      a(href="http://stjohnsmotel.com/reserve-a-room/3199618" target="_blank").button Make Reservations
+                  .default-6.small-4.medium-5.first
                     .image-container
-                      a(href="images/event@2x.jpg").image-popup.no-gallery
+                      a(href="images/wedding-2@2x.jpg").image-popup.no-gallery
                         picture
                           //if IE 9
                             video(style="display: none;")
-                          source(srcset="images/event@2x.jpg", media="(min-width: 1281px)")
+                          source(srcset="images/wedding-2@2x.jpg", media="(min-width: 1281px)")
                           //if IE 9
-                          img(srcset="images/event.jpg, images/event@2x.jpg 2x", alt="Hornschlittenrennen (sledge race on a traditional sledge)")
-                  .default-6.small-4.medium-5
-                    h2 Hornschlittenrennen (Sledge Race on A Traditional Sledge)
-                    p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy canes cheesecake gummies candy. Jelly-o marzipan icing sugar plum cookie cookie candy canes pie. Croissant fruitcake cake bonbon cake I love I love ice cream.
-                    .link
-                      a(href="#").default Check Detail → 
+                          img(srcset="images/wedding-2.jpg, images/wedding-2@2x.jpg 2x", alt="Sleep Inn Hotel")
                 //.accommodations__slide__content
               //.accommodations__slide
 
           // .accommodations__content
-        // .accommodations__nav
     // #accommodations
 
     section#moments.moments.lightbg--green
@@ -286,7 +275,7 @@ block content
                 //if IE 9
                 img(srcset="images/moments-3-thumb.jpg, images/moments-3-thumb@2x.jpg 2x", alt="Beautiful Moments")
 
-        .default-4.small-4.medium-5.moments__item
+        .default-4.small-4.medium-5.moments__item.clear
           .image-container
             a(href="images/moments-4.jpg").image-popup
               picture
@@ -297,13 +286,13 @@ block content
                 img(srcset="images/moments-4-thumb.jpg, images/moments-4-thumb@2x.jpg 2x", alt="Beautiful Moments")
         .default-4.small-4.medium-5.moments__item
           .image-container
-            a(href="images/moments-5.jpg").image-popup
+            a(href="images/moments-16.jpg").image-popup
               picture
                 //if IE 9
                   video(style="display: none;")
-                source(srcset="images/moments-5-thumb@2x.jpg", media="(min-width: 1281px)")
+                source(srcset="images/moments-16-thumb@2x.jpg", media="(min-width: 1281px)")
                 //if IE 9
-                img(srcset="images/moments-5-thumb.jpg, images/moments-5-thumb@2x.jpg 2x", alt="Beautiful Moments")
+                img(srcset="images/moments-16-thumb.jpg, images/moments-16-thumb@2x.jpg 2x", alt="Beautiful Moments")
         .default-4.small-4.medium-5.moments__item
           .image-container
             a(href="images/moments-6.jpg").image-popup
@@ -313,8 +302,35 @@ block content
                 source(srcset="images/moments-6-thumb@2x.jpg", media="(min-width: 1281px)")
                 //if IE 9
                 img(srcset="images/moments-6-thumb.jpg, images/moments-6-thumb@2x.jpg 2x", alt="Beautiful Moments")
-
+        .default-4.small-4.medium-5.moments__item.pull-right
+          .image-container
+            a(href="images/moments-5.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-5-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-5-thumb.jpg, images/moments-5-thumb@2x.jpg 2x", alt="Beautiful Moments")
         .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-12.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-12-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-12-thumb.jpg, images/moments-12-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item.clear
+          .image-container
+            a(href="images/moments-21.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-21-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-21-thumb.jpg, images/moments-21-thumb@2x.jpg 2x", alt="Beautiful Moments")
+
+        .default-4.small-4.medium-5.moments__item.pull-right
           .image-container
             a(href="images/moments-7.jpg").image-popup
               picture
@@ -325,6 +341,15 @@ block content
                 img(srcset="images/moments-7-thumb.jpg, images/moments-7-thumb@2x.jpg 2x", alt="Beautiful Moments")
         .default-4.small-4.medium-5.moments__item
           .image-container
+            a(href="images/moments-10.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-10-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-10-thumb.jpg, images/moments-10-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item.clear
+          .image-container
             a(href="images/moments-8.jpg").image-popup
               picture
                 //if IE 9
@@ -334,13 +359,130 @@ block content
                 img(srcset="images/moments-8-thumb.jpg, images/moments-8-thumb@2x.jpg 2x", alt="Beautiful Moments")
         .default-4.small-4.medium-5.moments__item
           .image-container
-            a(href="images/moments-1.jpg").image-popup
+            a(href="images/moments-22.jpg").image-popup
               picture
                 //if IE 9
                   video(style="display: none;")
-                source(srcset="images/moments-4-thumb@2x.jpg", media="(min-width: 1281px)")
+                source(srcset="images/moments-22-thumb@2x.jpg", media="(min-width: 1281px)")
                 //if IE 9
-                img(srcset="images/moments-4-thumb.jpg, images/moments-4-thumb@2x.jpg 2x", alt="Beautiful Moments")
+                img(srcset="images/moments-22-thumb.jpg, images/moments-22-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-11.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-11-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-11-thumb.jpg, images/moments-11-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item.clear
+          .image-container
+            a(href="images/moments-15.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-15-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-15-thumb.jpg, images/moments-15-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-9.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-9-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-9-thumb.jpg, images/moments-9-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-17.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-17-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-17-thumb.jpg, images/moments-17-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-25.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-25-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-25-thumb.jpg, images/moments-25-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item.clear
+          .image-container
+            a(href="images/moments-20.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-20-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-20-thumb.jpg, images/moments-20-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-19.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-19-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-19-thumb.jpg, images/moments-19-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-23.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-23-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-23-thumb.jpg, images/moments-23-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item.pull-right
+          .image-container
+            a(href="images/moments-14.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-14-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-14-thumb.jpg, images/moments-14-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-13.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-13-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-13-thumb.jpg, images/moments-13-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item.clear
+          .image-container
+            a(href="images/moments-18.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-18-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-18-thumb.jpg, images/moments-18-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-24.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-24-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-24-thumb.jpg, images/moments-24-thumb@2x.jpg 2x", alt="Beautiful Moments")
+        .default-4.small-4.medium-5.moments__item
+          .image-container
+            a(href="images/moments-26.jpg").image-popup
+              picture
+                //if IE 9
+                  video(style="display: none;")
+                source(srcset="images/moments-26-thumb@2x.jpg", media="(min-width: 1281px)")
+                //if IE 9
+                img(srcset="images/moments-26-thumb.jpg, images/moments-26-thumb@2x.jpg 2x", alt="Beautiful Moments")
 
     // #moments
 
@@ -356,19 +498,7 @@ block content
               source(srcset="images/people-1@2x.jpg", media="(min-width: 1281px)")
               //if IE 9
               img(srcset="images/people-1.jpg, images/people-1@2x.jpg 2x", alt="Peter & Scarlet Johansson")
-          h2 Peter & Scarlet Johansson
-          p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy canes cheesecake gummies candy. Jelly-o marzipan icing sugar plum cookie cookie candy canes pie. Croissant fruitcake cake bonbon cake I love I love ice cream.
-          ul.social
-            li
-              a(href="#").icon-facebook
-            li
-              a(href="#").icon-twitter
-            li
-              a(href="#").icon-google
-            li
-              a(href="#").icon-instagram
-            li
-              a(href="#").icon-link
+          h2 Barry <span>c</span> Lynette Flowers
         //.couple__part
 
         .couple__part.default-6.small-4.medium-5
@@ -380,23 +510,11 @@ block content
               source(srcset="images/people-2@2x.jpg", media="(min-width: 1281px)")
               //if IE 9
               img(srcset="images/people-2.jpg, images/people-2@2x.jpg 2x", alt="Keeanu & Linda Reeves")
-          h2 Keeanu & Linda Reeves
-          p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy canes cheesecake gummies candy. Jelly-o marzipan icing sugar plum cookie cookie candy canes pie. Croissant fruitcake cake bonbon cake I love I love ice cream.
-          ul.social
-            li
-              a(href="#").icon-facebook
-            li
-              a(href="#").icon-twitter
-            li
-              a(href="#").icon-google
-            li
-              a(href="#").icon-instagram
-            li
-              a(href="#").icon-link
+          h2 Jerry <span>c</span> Debby Spitler
         //.couple__part
 
         .default-6.small-4.medium-5.nest
-          h3.center-text The Bridesmaids
+          h3 The Bridesmaids
           ul.people__list
             li
               .default-4.small-4.medium-5
@@ -408,19 +526,8 @@ block content
                     //if IE 9
                     img(srcset="images/people-3.jpg, images/people-3@2x.jpg 2x", alt="Clara Johansson")
               .people__text.default-8.small-4.medium-10
-                h3 Clara Johansson
+                h3 Rose Dykema
                 p Clara is Lori's big sister! She has squeezed Lori’s chubby baby cheeks, helped her with math homework, and is Lori’s official Google buddy.
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
 
             li
               .default-4.small-4.medium-5
@@ -432,19 +539,8 @@ block content
                     //if IE 9
                     img(srcset="images/people-4.jpg, images/people-4@2x.jpg 2x", alt="Louise Murdoch")
               .people__text.default-8.medium-10.small-4
-                h3 Louise Murdoch
-                p Louise has two cats and countless fictional characters weaving tales inside her head (we're fairly certain she’s not schizophrenic). She is Lori’s cousin. 
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
+                h3 Jenna Dykehouse
+                p Louise has two cats and countless fictional characters weaving tales inside her head (we're fairly certain she’s not schizophrenic). She is Lori’s cousin.
 
             li
               .default-4.small-4.medium-5
@@ -456,47 +552,12 @@ block content
                     //if IE 9
                     img(srcset="images/people-5.jpg, images/people-5@2x.jpg 2x", alt="Lisa Lawson")
               .people__text.default-8.medium-10.small-4
-                h3 Lisa Lawson
+                h3 Kristin Slough
                 p Lisa is Lori’s college best friend. Lisa is currently writing her first novel, and Lori would be the inspiration for the protagonist.
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
-
-            li
-              .default-4.small-4.medium-5
-                .image-container.full-rounded.lomo
-                  picture
-                    //if IE 9
-                      video(style="display: none;")
-                    source(srcset="images/people-6@2x.jpg", media="(min-width: 1281px)")
-                    //if IE 9
-                    img(srcset="images/people-6.jpg, images/people-6@2x.jpg 2x", alt="Fiona Murphy")
-              .people__text.default-8.medium-10.small-4
-                h3 Fiona Murphy
-                p Fiona is Lori’s gym buddy. She loves to ride a bike every now and then. She is also known as Lori’s party buddy and rival in cola pong. 
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
           // .people__list
 
         .default-6.small-4.medium-5.nest
-          h3.center-text The Groomsmen
+          h3 The Groomsmen
           ul.people__list
             li
               .default-4.small-4.medium-5
@@ -508,19 +569,8 @@ block content
                     //if IE 9
                     img(srcset="images/people-7.jpg, images/people-7@2x.jpg 2x", alt="Benjamin Reeves")
               .people__text.default-8.medium-10.small-4
-                h3 Benjamin Reeves
+                h3 Andy Zevalkink
                 p Ben is Keet's big bro! He has squeezed Keet’s chubby baby cheeks, helped him with math homework, and is Keet’s official Google buddy.
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
 
             li
               .default-4.small-4.medium-5
@@ -532,19 +582,8 @@ block content
                     //if IE 9
                     img(srcset="images/people-8.jpg, images/people-8@2x.jpg 2x", alt="Anton Martin")
               .people__text.default-8.medium-10.small-4
-                h3 Anton Martin
+                h3 Max VanderWerff
                 p Anton has two dogs and countless fictional characters weaving tales inside his head (we're fairly certain he’s not schizophrenic). He is Keet’s cousin.
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
 
             li
               .default-4.small-4.medium-5
@@ -556,47 +595,12 @@ block content
                     //if IE 9
                     img(srcset="images/people-9.jpg, images/people-9@2x.jpg 2x", alt="Edward Peterson")
               .people__text.default-8.medium-10.small-4
-                h3 Edward Peterson
+                h3 Ryan Petrovich
                 p Edward  is Keet’s college best friend. Edward is currently writing his first novel, and Keet would be the inspiration for the protagonist.
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
-
-            li
-              .default-4.small-4.medium-5
-                .image-container.full-rounded.lomo
-                  picture
-                    //if IE 9
-                      video(style="display: none;")
-                    source(srcset="images/people-10@2x.jpg", media="(min-width: 1281px)")
-                    //if IE 9
-                    img(srcset="images/people-10.jpg, images/people-10@2x.jpg 2x", alt="Jake Phillips")
-              .people__text.default-8.medium-10.small-4
-                h3 Jake Phillips
-                p Jake is Keet’s gym buddy. He loves to ride a bike every now and then. He is also known as Keet’s party buddy and rival in cola pong.
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
           // .people__list
 
         .default-6.small-4.medium-5.nest
-          h3.center-text The Flower Girl
+          h3 The Flower Girl
           ul.people__list
             li
               .default-4.small-4.medium-5
@@ -608,23 +612,12 @@ block content
                     //if IE 9
                     img(srcset="images/people-11.jpg, images/people-11@2x.jpg 2x", alt="Remy Johansson")
               .people__text.default-8.medium-10.small-4
-                h3 Remy Johansson
+                h3 Evie VanderWerff
                 p Remy is Lori’s cousin. She is 4 years old and loves to sing and dance! She loves to eat cheese and  thinks she is the family’s boss!
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
           //.people__list
 
         .default-6.small-4.medium-5.nest
-          h3.center-text The Ring Bearer
+          h3 The Ring Bearer
           ul.people__list
             li
               .default-4.small-4.medium-5
@@ -636,152 +629,24 @@ block content
                     //if IE 9
                     img(srcset="images/people-12.jpg, images/people-12@2x.jpg 2x", alt="Isaiah Reeves")
               .people__text.default-8.medium-10.small-4
-                h3 Isaiah Reeves
+                h3 Lucas Dykema
                 p Isaiah is Keet’s nephew. He is 4 years old and loves to play wrestling! He also enjoys going to school and breaking out his dance moves.
-                ul.social
-                  li
-                    a(href="#").icon-facebook
-                  li
-                    a(href="#").icon-twitter
-                  li
-                    a(href="#").icon-google
-                  li
-                    a(href="#").icon-instagram
-                  li
-                    a(href="#").icon-link
           //.people__list
-
-      .row
-        .default-6.small-4.medium-8.people__txtbottom.center-block.center-text
-          h4 Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy canes cheesecake gummies candy. Jelly-o marzipan icing sugar plum cookie cookie candy canes pie. Croissant fruitcake cake bonbon cake I love I love ice cream.
     // #people
 
     section#gift.gift.lightbg--green
       .row
         h1.section__title Gift Registry
         .gift__text.default-6.small-4.medium-8.center-block.center-text
-          h4 Gift is a cool way if you still wanna be our friends. Just kidding, the most important gift you can bring us is having you and your silly jokes at our celebration. But still, if you would like to get us something, we’d love that too…you can find our registries below. Please send any gifts to our home, we will not be able to bring them with us from Germany.
-        .gift__carousel
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-1@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-1.png, images/registry-1@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-2@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-2.png, images/registry-2@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-3@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-3.png, images/registry-3@2x.png 2x", alt="Registry")
+          h4 Gifts are cool if you still wanna be our friends. Just kidding! The most important gift you can bring us is having you and your silly jokes at our celebration. But still, if you would like to get us something, we’d love that too…you can find our registry below.
+          a(href="http://www.zola.com/registry/thespitlers")
+            picture
+              //if IE 9
+                video(style="display: none;")
+              source(srcset="images/registry-1@2x.png", media="(min-width: 1281px)")
+              //if IE 9
+              img(srcset="images/registry-1.png, images/registry-1@2x.png 2x", alt="Registry")
 
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-4@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-4.png, images/registry-4@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-11@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-11.png, images/registry-11@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-12@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-12.png, images/registry-12@2x.png 2x", alt="Registry")
-
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-7@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-7.png, images/registry-7@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-8@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-8.png, images/registry-8@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-9@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-9.png", alt="Registry")
-
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-13@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-13.png, images/registry-13@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-14@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-14.png, images/registry-14@2x.png 2x", alt="Registry")
-          .gift__carousel__content.center-text
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-15@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-15.png, images/registry-15@2x.png 2x", alt="Registry")
-        //.gift__carousel
-
-        .gift__text.default-6.small-4.medium-8.center-block.center-text
-          h4 Instead of wedding gifts, you could also honor our wedding by donating to selected charity organizations below.
-        .default-12.small-4.medium-10.nest
-          .default-4.small-4.medium-5.center-text.default--push-1
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-20@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-20.png, images/registry-20@2x.png 2x", alt="Registry")
-          .default-4.small-4.medium-5.center-text.default--push-2
-            a(href="#")
-              picture
-                //if IE 9
-                  video(style="display: none;")
-                source(srcset="images/registry-21@2x.png", media="(min-width: 1281px)")
-                //if IE 9
-                img(srcset="images/registry-21.png, images/registry-21@2x.png 2x", alt="Registry")
     // #gift
 
     section#rsvp.rsvp.darkbg
@@ -789,7 +654,7 @@ block content
       .row
         h1.section__title RSVP
         .rsvp__text.default-6.small-4.medium-8.center-block.nest
-          h4.center-text Celebrate with us. <br>Let us know if you can attend by December 1, 2015. Hugs!
+          h4.center-text Celebrate with us. <br>Let us know if you can attend by August <span>1, 2016</span>. Hugs!
           form(action="#", data-parsley-validate="")
             .default-6.small-4.medium-10
               label
@@ -828,53 +693,4 @@ block content
       .default-12.small-4.medium-10.center-text
         p Designed with <span class="icon-heart"></span> by <a href="http://lieur.co", target="_blank"><span class="icon-lieur-logo"></span></a>.
   // footer
-
-  // BEAUTIFUL MOMENTS POPUP
-  
-  #bm-popup-1.mfp-hide.row
-    .popup.default-10.center-block
-      .popup__left.default-6.medium-5.small-4
-        h2 Lunch at Ponte Vecchio
-        p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy.
-        p Bruce forsyth got milk will you do the fandango groucho-a-like? Rugged et bogie basket inspector clouseau tip top old bean Sergeant major will you do the fandango charlie chaplin?
-        p Kaiser bill great dictator mark lawrenson consectetur groucho marx brigadier albert einstein lemmy, mexican lemmy consectetur old west sheriff albert einstein great dictator kaiser bill gentleman graeme souness groucho marx mark lawrenson brigadier waiter, kaiser bill old west sheriff great dictator lip warmer mexican waiter mark lawrenson brigadier albert einstein groucho marx professor plum consectetur graeme souness hungarian gentleman ian rush lemmy.
-
-      //.popup__left
-      .popup__right.default-6.medium-5.small-4
-        .image-border
-          img(src="images/moments-1.jpg")
-      //.popup__right
-  //#bm-popup-1
-
-  #bm-popup-2.mfp-hide.row
-    .popup.default-10.center-block
-      .popup__left.default-6.medium-5.small-4
-        .image-border
-          img(src="images/moments-2.jpg")
-
-      //.popup__left
-      .popup__right.default-6.medium-5.small-4
-        h2 Lunch at Ponte Vecchio
-        p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy.
-        p Bruce forsyth got milk will you do the fandango groucho-a-like? Rugged et bogie basket inspector clouseau tip top old bean Sergeant major will you do the fandango charlie chaplin?
-        p Kaiser bill great dictator mark lawrenson consectetur groucho marx brigadier albert einstein lemmy, mexican lemmy consectetur old west sheriff albert einstein great dictator kaiser bill gentleman graeme souness groucho marx mark lawrenson brigadier waiter, kaiser bill old west sheriff great dictator lip warmer mexican waiter mark lawrenson brigadier albert einstein groucho marx professor plum consectetur graeme souness hungarian gentleman ian rush lemmy.
-        
-      //.popup__right
-  //#bm-popup-2
-
-  #bm-popup-3.mfp-hide.row
-    .popup.default-10.center-block
-      .popup__top.default-12.medium-10.small-4
-        .image-border
-          img(src="images/moments-3.jpg")
-
-      //.popup__left
-      .popup__bottom.default-12.medium-10.small-4
-        h2 Lunch at Ponte Vecchio
-        p Cupcake ipsum dolor sit amet dragée lollipop. Liquorice pastry cheesecake. Gummi bears sweet icing biscuit I love candy.
-        p Bruce forsyth got milk will you do the fandango groucho-a-like? Rugged et bogie basket inspector clouseau tip top old bean Sergeant major will you do the fandango charlie chaplin?
-        p Kaiser bill great dictator mark lawrenson consectetur groucho marx brigadier albert einstein lemmy, mexican lemmy consectetur old west sheriff albert einstein great dictator kaiser bill gentleman graeme souness groucho marx mark lawrenson brigadier waiter, kaiser bill old west sheriff great dictator lip warmer mexican waiter mark lawrenson brigadier albert einstein groucho marx professor plum consectetur graeme souness hungarian gentleman ian rush lemmy.
-        
-      //.popup__right
-  //#bm-popup-3
 

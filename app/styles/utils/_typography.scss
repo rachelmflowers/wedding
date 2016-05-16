@@ -105,3 +105,5 @@
 p, ul, ol, pre, .table-container, blockquote {
 	@extend %default;
 }
+
+a:hover { text-decoration: none; }

@@ -13,11 +13,17 @@ gulp.task('styles', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
+    outputStyle: 'expanded',
+    precision: 10,
+    includePaths: ['.']
+  }).on('error', $.sass.logError))
+    .pipe($.autoprefixer({browsers: [
+      '> 5% in US',
+      'last 2 versions',
+      'ie >= 9',
+      'iOS >= 7',
+      'safari >= 7'
+    ]}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -59,7 +65,7 @@ gulp.task('views', () => {
     .pipe(reload({stream: true}));
 });
 
- gulp.task('html', ['views', 'styles'], () => {
+gulp.task('html', ['views', 'styles'], () => {
   return gulp.src(['app/*.html', '.tmp/*.html'])
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
@@ -71,22 +77,22 @@ gulp.task('views', () => {
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
-      progressive: true,
-      interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
-      svgoPlugins: [{cleanupIDs: false}]
-    }))
-    .on('error', function (err) {
-      console.log(err);
-      this.end();
-    })))
+    progressive: true,
+    interlaced: true,
+    // don't remove IDs from SVGs, they are often used
+    // as hooks for embedding and styling
+    svgoPlugins: [{cleanupIDs: false}]
+  }))
+               .on('error', function (err) {
+    console.log(err);
+    this.end();
+  })))
     .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('app/fonts/**/*', 'app/icons/fonts/**/*'))
+                  .concat('app/fonts/**/*', 'app/icons/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
@@ -122,7 +128,7 @@ gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
-  
+
   gulp.watch('app/**/*.jade', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
@@ -163,17 +169,17 @@ gulp.task('serve:test', ['scripts'], () => {
 gulp.task('wiredep', () => {
   gulp.src('app/styles/*.scss')
     .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
+    ignorePath: /^(\.\.\/)+/
+  }))
     .pipe(gulp.dest('app/styles'));
 
   gulp.src('app/layouts/*.jade')
     .pipe(wiredep({
-      exclude: ['bootstrap-sass'],
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
+    exclude: ['bootstrap-sass'],
+    ignorePath: /^(\.\.\/)*\.\./
+  }))
     .pipe(gulp.dest('app/layouts'));
- });
+});
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));

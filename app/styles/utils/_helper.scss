@@ -15,6 +15,12 @@
     display: none;
 }
 
+.clear {
+  clear: both;
+}
+
+.pull-right { float: right; }
+
 .row{
 	.first{
 		float: left;
