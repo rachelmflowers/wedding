@@ -16,7 +16,7 @@ block content
     .blurred
       .blurred__wrap
     .inner
-      span.mobile-nav 
+      span.mobile-nav
         span Menu
       ul
         li(style={display: 'none'}): a(href="#top") &nbsp;
@@ -26,7 +26,7 @@ block content
         li: a(href="#gift") Registry
         li: a(href="#rsvp") RSVP
   //#topnav
-  
+
   #content
     section#couple.couple
       .row
@@ -655,31 +655,35 @@ block content
         h1.section__title RSVP
         .rsvp__text.default-6.small-4.medium-8.center-block.nest
           h4.center-text Celebrate with us. <br>Let us know if you can attend by August <span>1, 2016</span>. Hugs!
-          form(action="#", data-parsley-validate="")
+          form(action="/save.php", data-parsley-validate="")
+            input(type="hidden", name="formAction", value="save")
             .default-6.small-4.medium-10
               label
                 span First Name*
-                input(type="text", placeholder="Johny", required)
+                input(type="text", name="firstName", placeholder="Johny", required)
             .default-6.small-4.medium-10
               label
                 span Last Name*
-                input(type="text", placeholder="Macan", required)
+                input(type="text", name="lastName", placeholder="Macan", required)
             .default-12.small-4.medium-10
               label
                 span Email Address*
-                input(type="email", placeholder="johny@macanmail.com",data-parsley-trigger="change", required)
+                input(type="email", name="email", placeholder="johny@macanmail.com",data-parsley-trigger="change", required)
+            .default-12.small-4.medium-10
+              label(class="radio-group")
+                span Are you attending?
+                label Hell Yes!
+                  input(type="radio", name="isAttending", checked="checked" value="1")
+                label Unfortunately, we suck.
+                  input(type="radio", name="isAttending", value="0")
             .default-12.small-4.medium-10
               label
-                span Are you attending?*
-                input(type="text", placeholder="Yes!", required)
+                span Who else is coming with you?
+                input(type="text", name="othersAttending", placeholder="My grandma")
             .default-12.small-4.medium-10
               label
-                span Who else is coming with you?*
-                input(type="text", placeholder="My grandma", required)
-            .default-12.small-4.medium-10
-              label
-                span Song suggestions or any other messages?*
-                textarea Didi Kempot - Manuk Cucakrowo
+                span Song suggestions or any other messages?
+                textarea(name="songSuggestions") Takin Care of Business - Bachman Turner Overdrive
             .default-12.small-4.medium-10.center-text.button-submit
               input(type="submit", value="submit").button
 
