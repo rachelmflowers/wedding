@@ -499,6 +499,7 @@ block content
               //if IE 9
               img(srcset="images/people-1.jpg, images/people-1@2x.jpg 2x", alt="Peter & Scarlet Johansson")
           h2 Barry <span>c</span> Lynette Flowers
+          p Barry and Lynette have been married for almost 35 years. Their amazing relationship is something that Rachel aspires to have in her own marriage. They've tought Rachel the value of hard work and how hard work rewards you with the ability to have fun and play. They've always been a very close family, camping, playing, and going on crazy pirate adventures together.
         //.couple__part
 
         .couple__part.default-6.small-4.medium-5
@@ -511,6 +512,7 @@ block content
               //if IE 9
               img(srcset="images/people-2.jpg, images/people-2@2x.jpg 2x", alt="Keeanu & Linda Reeves")
           h2 Jerry <span>c</span> Debby Spitler
+          p Jerry and Debby .... Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
         //.couple__part
 
         .default-6.small-4.medium-5.nest
@@ -527,7 +529,7 @@ block content
                     img(srcset="images/people-3.jpg, images/people-3@2x.jpg 2x", alt="Clara Johansson")
               .people__text.default-8.small-4.medium-10
                 h3 Rose Dykema
-                p Clara is Lori's big sister! She has squeezed Lori’s chubby baby cheeks, helped her with math homework, and is Lori’s official Google buddy.
+                p Rachel and Rose met when they worked together at the Black Rose Irish Pub in Grand Rapids over 10 years ago. They are often mistaken for as sisters, even by family members, even if not sisters by blood, they are definitely sisters of the heart.
 
             li
               .default-4.small-4.medium-5
@@ -540,7 +542,7 @@ block content
                     img(srcset="images/people-4.jpg, images/people-4@2x.jpg 2x", alt="Louise Murdoch")
               .people__text.default-8.medium-10.small-4
                 h3 Jenna Dykehouse
-                p Louise has two cats and countless fictional characters weaving tales inside her head (we're fairly certain she’s not schizophrenic). She is Lori’s cousin.
+                p Jenna is Rachel's fun loving, adventourous, food and wine loving best friend. One of their favorite pastimes is coming back to Rachel's downtown apartment after the bars shut down and Jenna making delicous drunken meals out of crazy leftover ingredients in Rachel's fridge.
 
             li
               .default-4.small-4.medium-5
@@ -553,7 +555,7 @@ block content
                     img(srcset="images/people-5.jpg, images/people-5@2x.jpg 2x", alt="Lisa Lawson")
               .people__text.default-8.medium-10.small-4
                 h3 Kristin Slough
-                p Lisa is Lori’s college best friend. Lisa is currently writing her first novel, and Lori would be the inspiration for the protagonist.
+                p Kristin and Rachel have been the closest of friends since 6th grade. From working together at Andy T's, to sexy spy shenanigans in middle school, and trips to seaworld, Kristin is and always will be one of Rachel's closest friends.
           // .people__list
 
         .default-6.small-4.medium-5.nest
@@ -599,7 +601,7 @@ block content
                 p Edward  is Keet’s college best friend. Edward is currently writing his first novel, and Keet would be the inspiration for the protagonist.
           // .people__list
 
-        .default-6.small-4.medium-5.nest
+        .default-6.small-4.medium-5.nest.flower-girl
           h3 The Flower Girl
           ul.people__list
             li
@@ -613,7 +615,7 @@ block content
                     img(srcset="images/people-11.jpg, images/people-11@2x.jpg 2x", alt="Remy Johansson")
               .people__text.default-8.medium-10.small-4
                 h3 Evie VanderWerff
-                p Remy is Lori’s cousin. She is 4 years old and loves to sing and dance! She loves to eat cheese and  thinks she is the family’s boss!
+                p Evie is the daughter of Max and Aimee, even if she's only two, she has no problem keeping up with her two big brothers. Maecenas sed diam eget risus varius blandit sit amet non magna.
           //.people__list
 
         .default-6.small-4.medium-5.nest
@@ -630,7 +632,7 @@ block content
                     img(srcset="images/people-12.jpg, images/people-12@2x.jpg 2x", alt="Isaiah Reeves")
               .people__text.default-8.medium-10.small-4
                 h3 Lucas Dykema
-                p Isaiah is Keet’s nephew. He is 4 years old and loves to play wrestling! He also enjoys going to school and breaking out his dance moves.
+                p Lucas is Rose and Patrick's son, at the wonderful age of two, he may look like his father, but he sure does act like his mother. He is an expert and getting into everything and causing lots of trouble.
           //.people__list
     // #people
 
@@ -655,7 +657,7 @@ block content
         h1.section__title RSVP
         .rsvp__text.default-6.small-4.medium-8.center-block.nest
           h4.center-text Celebrate with us. <br>Let us know if you can attend by August <span>1, 2016</span>. Hugs!
-          form(action="/save.php", data-parsley-validate="")
+          form(action="/save.php", method="post", data-parsley-validate="")
             input(type="hidden", name="formAction", value="save")
             .default-6.small-4.medium-10
               label
@@ -674,7 +676,7 @@ block content
                 span Are you attending?
                 label Hell Yes!
                   input(type="radio", name="isAttending", checked="checked" value="1")
-                label Unfortunately, we suck.
+                label Unfortunately, we can not.
                   input(type="radio", name="isAttending", value="0")
             .default-12.small-4.medium-10
               label

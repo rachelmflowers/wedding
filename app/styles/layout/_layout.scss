@@ -1,166 +1,166 @@
 .row{
-	@include container($susy-default);
-	@include susy-breakpoint($bp-small, $susy-small){
-		@include container($susy-small);
-	}
-	@include susy-breakpoint($bp-medium, $susy-medium){
-		@include container($susy-medium);
-	}
-	@include susy-breakpoint($bp-xxlarge, $susy-large){
-		@include container($susy-large);
-	}
-	//@extend %clearfix;
+    @include container($susy-default);
+    @include susy-breakpoint($bp-small, $susy-small){
+        @include container($susy-small);
+    }
+    @include susy-breakpoint($bp-medium, $susy-medium){
+        @include container($susy-medium);
+    }
+    @include susy-breakpoint($bp-xxlarge, $susy-large){
+        @include container($susy-large);
+    }
+    //@extend %clearfix;
 }
 
 // ----------------------
 // LOADER
 // ----------------------
 .loading{
-	overflow: hidden;
-	body{
-		overflow: hidden;
-	}
+    overflow: hidden;
+    body{
+        overflow: hidden;
+    }
 }
 .loader{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 100;
-	text-align: center;
-	.heartbeat-loader{
-		top: 50%;
-		text-indent: 0;
-		transform: rotate(0deg);
-		@include remunit((
-			width: 3.4375rem,
-	    	height: 4.6875rem
-		));
-	}
-	.heartbeat-loader:not(:required):after{
-		display: none;
-	}
-	.heartbeat-loader:not(:required):before{
-		@include remunit(font-size, mspow(3));
-		content: "\6e";
-		font-family: "lovebird" !important;
-	    font-style: normal !important;
-	    font-weight: normal !important;
-	    font-variant: normal !important;
-	    text-transform: none !important;
-	    speak: none;
-	    line-height: 1;
-	    -webkit-font-smoothing: antialiased;
-	    -moz-osx-font-smoothing: grayscale;
-	    border-radius: 0;
-	    width: auto;
-	    height: auto;
-	}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    .heartbeat-loader{
+        top: 50%;
+        text-indent: 0;
+        transform: rotate(0deg);
+        @include remunit((
+            width: 3.4375rem,
+            height: 4.6875rem
+        ));
+    }
+    .heartbeat-loader:not(:required):after{
+        display: none;
+    }
+    .heartbeat-loader:not(:required):before{
+        @include remunit(font-size, mspow(3));
+        content: "\6e";
+        font-family: "lovebird" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        border-radius: 0;
+        width: auto;
+        height: auto;
+    }
 }
 
 // ----------------------
-// BIG BANNER 
+// BIG BANNER
 // ----------------------
 
 .banner{
-	position: relative;
-	&__img,
-	&__gradient{
-		min-height: 320px;
-	}
-	&__img{
-		background-size: cover;
-		background-position: 80% 0;
-	}
-	&__gradient{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		@include remunit(padding, $default-line-height);
-	}
-	&__border{
-		height: 100%;
-		@include remunit(border-width, 2px);
-	}
-	&__text{
-		text-align: center;
-		img{
-			@include susy-breakpoint($bp-xxlarge){
-				width: 80%;
-			}
-		}
-	}
-	> .row{
-		@include vertical-align($position: absolute);
-		left: 0;
-		right: 0;
-	}
-	h1{
-		margin-top: 0;
-		@include remunit(margin-bottom, 1rem);
+    position: relative;
+    &__img,
+    &__gradient{
+        min-height: 320px;
+    }
+    &__img{
+        background-size: cover;
+        background-position: 80% 0;
+    }
+    &__gradient{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        @include remunit(padding, $default-line-height);
+    }
+    &__border{
+        height: 100%;
+        @include remunit(border-width, 2px);
+    }
+    &__text{
+        text-align: center;
+        img{
+            @include susy-breakpoint($bp-xxlarge){
+                width: 80%;
+            }
+        }
+    }
+    > .row{
+        @include vertical-align($position: absolute);
+        left: 0;
+        right: 0;
+    }
+    h1{
+        margin-top: 0;
+        @include remunit(margin-bottom, 1rem);
 
-		&.big{
-			margin-bottom: 0;
-		}
-	}
-	h2{
-		margin-top: 0;
+        &.big{
+            margin-bottom: 0;
+        }
+    }
+    h2{
+        margin-top: 0;
         font-family: $f-woodcabin;
-		@include remunit(margin-bottom, $default-line-height);
-	}
+        @include remunit(margin-bottom, $default-line-height);
+    }
 }
 
 .mobile-nav{
-	display: none;
-	cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 #topnav,
 .topnav{
-	position: relative;
-	overflow: hidden;
-	.inner{
-		> ul{
-			list-style: none;
-			text-align: center;
-			margin: 0;
-			padding-left: 0;
-			position: relative;
-			li{
-				@extend %h4;
-				@include inline-block;
-				@include remunit((
-					margin-right: 3rem,
-					margin-left: 3rem
-				));
+    position: relative;
+    overflow: hidden;
+    .inner{
+        > ul{
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding-left: 0;
+            position: relative;
+            li{
+                @extend %h4;
+                @include inline-block;
+                @include remunit((
+                    margin-right: 3rem,
+                    margin-left: 3rem
+                ));
                 font-family: $f-woodcabin;
                 font-weight: 600;
                 letter-spacing: 1.5px;
-				@include susy-breakpoint($bp-xlarge){
-					@include remunit((
-					margin-right: 2rem,
-					margin-left: 2rem
-				));
-				}
-			}
-		}
-	}
-	&.is_stuck{
-		z-index: 99;
-	}
-	.inner{
-		position: relative;
-		z-index: 9;
-	}
-	.blurred{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		filter: blur(6px);
-	}
+                @include susy-breakpoint($bp-xlarge){
+                    @include remunit((
+                    margin-right: 2rem,
+                    margin-left: 2rem
+                ));
+                }
+            }
+        }
+    }
+    &.is_stuck{
+        z-index: 99;
+    }
+    .inner{
+        position: relative;
+        z-index: 9;
+    }
+    .blurred{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        filter: blur(6px);
+    }
 }
 
 // ----------------------
@@ -168,115 +168,122 @@
 // ----------------------
 
 section{
-	position: relative;
+    position: relative;
 }
 
 .section{
-	&__border{
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		@include remunit((
-			padding: $default-line-height,
-			left: -2px // border-width
-		));
-		&:before{
-			content: "";
-			@include remunit(border-width, 0.125rem);
-			display: block;
-			border-style: solid;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-		+ *{
-			position: relative;
-			z-index: 2;
-		}
-	}
-	&__title{
-		text-align: center;
+    &__border{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include remunit((
+            padding: $default-line-height,
+            left: -2px // border-width
+        ));
+        &:before{
+            content: "";
+            @include remunit(border-width, 0.125rem);
+            display: block;
+            border-style: solid;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        + *{
+            position: relative;
+            z-index: 2;
+        }
+    }
+    &__title{
+        text-align: center;
         color: $c-copper;
-		&:before,
-		&:after{
+        &:before,
+        &:after{
             @include remunit(font-size, 5rem);
-			@include inline-block;
-			content: "A";
-			font-family: $f-ornaments !important;
-		    font-style: normal !important;
-		    font-weight: normal !important;
-		    font-variant: normal !important;
-		    text-transform: none !important;
-		    speak: none;
+            @include inline-block;
+            content: "A";
+            font-family: $f-ornaments !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
             color: $c-txtgreen;
             vertical-align: middle;
-		}
-		&:before{
-			margin-right: 20px;
+        }
+        &:before{
+            margin-right: 20px;
             transform: scale(-1, 1);
-		}
-		&:after{
-			margin-left: 20px;
-		}
-	}
+        }
+        &:after{
+            margin-left: 20px;
+        }
+    }
 }
 
 section{
-	@include remunit(padding, 2*$default-line-height 0);
+    @include remunit(padding, 2*$default-line-height 0);
 }
 
 .couple{
-	&__part{
-		text-align: center;
-		@include remunit(margin-bottom, $default-line-height);
-		h1{
-			margin-top: 0;
+    &__part{
+        text-align: center;
+        @include remunit(margin-bottom, $default-line-height);
+        h1{
+            margin-top: 0;
             margin-bottom: 0;
             line-height: 1;
             color: $c-lightgreen;
-		}
-		h2{
-			@include remunit(margin-top, $default-line-height);
+        }
+        h2{
+            @include remunit(margin-top, $default-line-height);
+            font-size: 1.75rem;
             color: $c-green;
-		}
-	}
-	&__photo{
-		@include remunit((
-			border-width: 0.125rem,
-			padding: 0.9375rem
-		));
-		border-style: solid;
-		text-align: center;
-		margin: 0 auto;
-		img{
-			vertical-align: middle;
-			border-radius: 100%;
-			width: 100%;
-		}
-	}
-	&__history{
-		text-align: center;
+        }
+
+        + .nest {
+            clear: both;
+        }
+    }
+    &__photo{
+        @include remunit((
+            border-width: 0.125rem,
+            padding: 0.9375rem
+        ));
+        border-style: solid;
+        text-align: center;
+        margin: 0 auto;
+        img{
+            vertical-align: middle;
+            border-radius: 100%;
+            width: 100%;
+        }
+    }
+    &__history{
+        text-align: center;
         letter-spacing: 1.5px;
-	}
+    }
 }
 
+.flower-girl { clear: both; }
+
 .social{
-	list-style: none;
-	padding: 0;
-	li{
-		@include inline-block;
-		margin-left: 5px;
-		margin-right: 5px;
-		a{
-			@include remunit(font-size, mspow(1)/1.2);
-			text-decoration: none;
-			&:before{
-				line-height: inherit;
-			}
-		}
-	}
+    list-style: none;
+    padding: 0;
+    li{
+        @include inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        a{
+            @include remunit(font-size, mspow(1)/1.2);
+            text-decoration: none;
+            &:before{
+                line-height: inherit;
+            }
+        }
+    }
 }
 
 
@@ -285,130 +292,130 @@ section{
 // ----------------------
 
 .carousel{
-	overflow-x: hidden;
-	&__content{
-		outline: none;
-		//opacity: 0.8;
-		//filter: blur(2px);
-		transition: 400ms;
-		img{
-			display: block;
-			width: 100%;
-		}
-		&__wrapper{
-			> a{
-				display: block;
-				position: relative;
-				&:before,
-				&:after{
-					transition: 400ms;
-				}
-				&:hover:before{
-					transform: scale(1);
-				}
-				&:hover:after{
-					opacity: 1;
-				}
-				&:before{
-					content:"";
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					transform: scale(0);
-				}
-				&:after{
-					content:"j";
-					@include vertical-align($position: absolute);
-					@include remunit(font-size, ms(1));
-					color: #fff;
-					font-family: "lovebird" !important;
-				    font-style: normal !important;
-				    font-weight: normal !important;
-				    font-variant: normal !important;
-				    text-transform: none !important;
-				    speak: none;
-				    line-height: 1;
-				    text-align: center;
-					width: 100%;
-					opacity: 0;
-				}
-			}
-		}
-		&__text{
-			@include remunit(padding-top, $default-line-height);
-			padding-left: 18px;
-			padding-right: 18px;
-			padding-bottom: 18px;
-			:last-child{
-				margin-bottom: 0;
-			}
-			h4{
-				margin-top: 0;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-		}
-	}
-	.slick-slide{
-		&.carousel__content{
-			transform: scaleY(0.9);
-			opacity: 0.5;
-			//filter: blur(5px);
-		}
-	}
-	.slick-active{
-		&.carousel__content{
-			transform: scale(0.9);
-			opacity: 0.5;
-			//filter: blur(5px);
-		}
-	}
-	.slick-center,
-	.slick-current{
-		&.carousel__content{
-			transform: scale(1);
-			opacity: 1;
-			//filter: blur(0);
-		}
-	}
+    overflow-x: hidden;
+    &__content{
+        outline: none;
+        //opacity: 0.8;
+        //filter: blur(2px);
+        transition: 400ms;
+        img{
+            display: block;
+            width: 100%;
+        }
+        &__wrapper{
+            > a{
+                display: block;
+                position: relative;
+                &:before,
+                &:after{
+                    transition: 400ms;
+                }
+                &:hover:before{
+                    transform: scale(1);
+                }
+                &:hover:after{
+                    opacity: 1;
+                }
+                &:before{
+                    content:"";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(0);
+                }
+                &:after{
+                    content:"j";
+                    @include vertical-align($position: absolute);
+                    @include remunit(font-size, ms(1));
+                    color: #fff;
+                    font-family: "lovebird" !important;
+                    font-style: normal !important;
+                    font-weight: normal !important;
+                    font-variant: normal !important;
+                    text-transform: none !important;
+                    speak: none;
+                    line-height: 1;
+                    text-align: center;
+                    width: 100%;
+                    opacity: 0;
+                }
+            }
+        }
+        &__text{
+            @include remunit(padding-top, $default-line-height);
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-bottom: 18px;
+            :last-child{
+                margin-bottom: 0;
+            }
+            h4{
+                margin-top: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    .slick-slide{
+        &.carousel__content{
+            transform: scaleY(0.9);
+            opacity: 0.5;
+            //filter: blur(5px);
+        }
+    }
+    .slick-active{
+        &.carousel__content{
+            transform: scale(0.9);
+            opacity: 0.5;
+            //filter: blur(5px);
+        }
+    }
+    .slick-center,
+    .slick-current{
+        &.carousel__content{
+            transform: scale(1);
+            opacity: 1;
+            //filter: blur(0);
+        }
+    }
 }
 
 .slick-next{
-	right: 0;
-	&:before{
-		content:"f";
-	}
+    right: 0;
+    &:before{
+        content:"f";
+    }
 }
 .slick-prev{
-	left: 0;
-	z-index: 9;
-	&:before{
-		content:"g";
-	}
+    left: 0;
+    z-index: 9;
+    &:before{
+        content:"g";
+    }
 }
 .slick-next,
 .slick-prev,
 .slick-next:focus,
 .slick-prev:focus{
-	width: 80px;
-	height: 90%;
-	margin-top: 0;
-	transition: 400ms;
-	&:before{
-		font-family: "lovebird" !important;
-	    font-style: normal !important;
-	    font-weight: normal !important;
-	    font-variant: normal !important;
-	    text-transform: none !important;
-	    speak: none;
-	    line-height: 1;
-	    opacity: 1;
-	    @include remunit(font-size, pow(1.5, 2)*1rem); 
-	}
+    width: 80px;
+    height: 90%;
+    margin-top: 0;
+    transition: 400ms;
+    &:before{
+        font-family: "lovebird" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        opacity: 1;
+        @include remunit(font-size, pow(1.5, 2)*1rem);
+    }
 }
 
 // ----------------------
@@ -416,21 +423,21 @@ section{
 // ----------------------
 
 .wedding{
-	&__part{
-		@include remunit((
-			margin-top: $default-line-height,
-			margin-bottom: 2*$default-line-height
-		));
-		h2{
-			@include remunit(margin-top, $default-line-height);
-		}
+    &__part{
+        @include remunit((
+            margin-top: $default-line-height,
+            margin-bottom: 2*$default-line-height
+        ));
+        h2{
+            @include remunit(margin-top, $default-line-height);
+        }
         h3 {
             line-height: 1.15;
         }
-		.button{
-			@include remunit(margin-top, $default-line-height);
-		}
-	}
+        .button{
+            @include remunit(margin-top, $default-line-height);
+        }
+    }
 }
 
 // ----------------------
@@ -438,30 +445,30 @@ section{
 // ----------------------
 
 .accommodations{
-	&__content{
-		padding: 0;
-	}
-	&__slide{
-		&__content{
-			.link{
-				@include remunit(margin-top, 2*$default-line-height);
-				text-align: right;
-				overflow-y: auto;
-				:first-child{
-					float: left;
-				}
-				a{
-					@include inline-block;
-				}
-				> :not(:first-child){
-					@include remunit(margin-top, 0.5*$default-line-height);
-				}
-			}
-			.image-container{
-				@include remunit(margin-top, 2*$default-line-height);
-			}
-		}
-	}
+    &__content{
+        padding: 0;
+    }
+    &__slide{
+        &__content{
+            .link{
+                @include remunit(margin-top, 2*$default-line-height);
+                text-align: right;
+                overflow-y: auto;
+                :first-child{
+                    float: left;
+                }
+                a{
+                    @include inline-block;
+                }
+                > :not(:first-child){
+                    @include remunit(margin-top, 0.5*$default-line-height);
+                }
+            }
+            .image-container{
+                @include remunit(margin-top, 2*$default-line-height);
+            }
+        }
+    }
 }
 
 // ----------------------
@@ -469,14 +476,14 @@ section{
 // ----------------------
 
 .moments{
-	@include remunit(padding-bottom, $default-line-height);
-	&__item{
-		@include remunit(margin-bottom, 2*$default-line-height);
-		a:focus,
-		img:focus{
-			outline: none;
-		}
-	}
+    @include remunit(padding-bottom, $default-line-height);
+    &__item{
+        @include remunit(margin-bottom, 2*$default-line-height);
+        a:focus,
+        img:focus{
+            outline: none;
+        }
+    }
 }
 
 // ----------------------
@@ -485,35 +492,35 @@ section{
 
 #people,
 .people{
-	h3{
-		@include remunit(margin-bottom, 2*$default-line-height);
-	}
-	.people{
-		&__list{
-			@include remunit(margin-bottom, $default-line-height);
-			h3{
-				margin-top: 0;
+    h3{
+        @include remunit(margin-bottom, 2*$default-line-height);
+    }
+    .people{
+        &__list{
+            @include remunit(margin-bottom, $default-line-height);
+            h3{
+                margin-top: 0;
                 margin-bottom: 0;
-			}
-		}
-	}
+            }
+        }
+    }
 }
 .people{
-	&__list{
-		padding: 0;
-		list-style: none;
-		> li{
-			@extend %clearfix;
-			@include remunit(margin-bottom, $default-line-height);
-		}
-		h3{
-			font-family: $f-playfair;
+    &__list{
+        padding: 0;
+        list-style: none;
+        > li{
+            @extend %clearfix;
+            @include remunit(margin-bottom, $default-line-height);
+        }
+        h3{
+            font-family: $f-playfair;
             @include remunit(font-size, 1.5rem );
-		}
-	}
-	&__txtbottom{
-		@include remunit(margin-top, $default-line-height);
-	}
+        }
+    }
+    &__txtbottom{
+        @include remunit(margin-top, $default-line-height);
+    }
 }
 
 // ----------------------
@@ -521,29 +528,29 @@ section{
 // ----------------------
 
 .gift{
-	&__text{
-		@include remunit(margin-bottom, 3*$default-line-height);
-	}
-	&__carousel{
-		@include remunit(margin-bottom, 3*$default-line-height);
-		&__content{
-			@include remunit(padding, 0 60px);
-			img{
-				margin: 0 auto;
-			}
-		}
-		.slick-slide{
-			img{
-				margin: 0 auto;	
-			}
-		}
-		.slick-next{
-			right: -25px;
-		}
-		.slick-prev{
-			left: -25px;
-		}
-	}
+    &__text{
+        @include remunit(margin-bottom, 3*$default-line-height);
+    }
+    &__carousel{
+        @include remunit(margin-bottom, 3*$default-line-height);
+        &__content{
+            @include remunit(padding, 0 60px);
+            img{
+                margin: 0 auto;
+            }
+        }
+        .slick-slide{
+            img{
+                margin: 0 auto;
+            }
+        }
+        .slick-next{
+            right: -25px;
+        }
+        .slick-prev{
+            left: -25px;
+        }
+    }
 }
 
 // ----------------------
@@ -551,12 +558,12 @@ section{
 // ----------------------
 #rsvp,
 .rsvp{
-	h4{
-		@include remunit((
-			margin-top: 0,
-			margin-bottom: 3*$default-line-height
-		));
-	}
+    h4{
+        @include remunit((
+            margin-top: 0,
+            margin-bottom: 3*$default-line-height
+        ));
+    }
 }
 
 // ----------------------
@@ -564,51 +571,51 @@ section{
 // ----------------------
 
 footer{
-	.icon-heart{
-		@include remunit(font-size, mspow(1)*0.75);
-		position: relative;
-		top: 3px;
-	}
-	.icon-lieur-logo{
-		@include remunit((
-			font-size: mspow(2)*1.2,
-			top: 1rem,
-			margin-top: -1.5625rem
-		));
-		@include inline-block;
-	    position: relative;
-	}
+    .icon-heart{
+        @include remunit(font-size, mspow(1)*0.75);
+        position: relative;
+        top: 3px;
+    }
+    .icon-lieur-logo{
+        @include remunit((
+            font-size: mspow(2)*1.2,
+            top: 1rem,
+            margin-top: -1.5625rem
+        ));
+        @include inline-block;
+        position: relative;
+    }
 }
 
 .popup{
-	padding: 40px 20px;
-	@extend %clearfix;
-	&__left,
-	&__right{
-		@include remunit(margin-bottom, 1.5rem);
-		> :first-child{
-			margin-top: 0;
-		}
-		> :last-child{
-			margin-bottom: 0;
-		}
-	}
+    padding: 40px 20px;
+    @extend %clearfix;
+    &__left,
+    &__right{
+        @include remunit(margin-bottom, 1.5rem);
+        > :first-child{
+            margin-top: 0;
+        }
+        > :last-child{
+            margin-bottom: 0;
+        }
+    }
 }
 
 .mfp-moment{
-	.mfp-content{
-		padding: 50px 0;
-	}
+    .mfp-content{
+        padding: 50px 0;
+    }
 }
 
 .mfp-content{
-	figcaption{
-		margin: 0;
-		line-height: 0;
-		&:before{
-			display: none;
-		}
-	}
+    figcaption{
+        margin: 0;
+        line-height: 0;
+        &:before{
+            display: none;
+        }
+    }
 }
 
 /* ZOOM POPUP ANIMATION */
@@ -637,15 +644,15 @@ footer{
 
 
 button.mfp-arrow{
-	opacity: 1;
-	&:before{
-		opacity: 1;
-	}
+    opacity: 1;
+    &:before{
+        opacity: 1;
+    }
 }
-.mfp-arrow-left:before, 
+.mfp-arrow-left:before,
 .mfp-arrow-right:before{
-	border: none;
-	font-family: "lovebird" !important;
+    border: none;
+    font-family: "lovebird" !important;
     font-style: normal !important;
     font-weight: normal !important;
     font-variant: normal !important;
@@ -655,51 +662,51 @@ button.mfp-arrow{
     @include remunit(font-size, pow(1.5, 2)*1rem);
 }
 .mfp-arrow-left:before{
-	content: "g";
+    content: "g";
 }
 .mfp-arrow-right:before{
-	content: "f";
+    content: "f";
 }
-.mfp-arrow-left:after, 
+.mfp-arrow-left:after,
 .mfp-arrow-left .mfp-a,
-.mfp-arrow-right:after, 
+.mfp-arrow-right:after,
 .mfp-arrow-right .mfp-a{
-	border: none;
-	margin: 0;
+    border: none;
+    margin: 0;
 }
 
 .mfp-close{
-	font-size: 0;
-	color: transparent;
-	top: 20px;
-	right: 20px;
-	&:active{
-		top: 25px;
-	}
-	&:before{
-		content: "m";
-		font-family: "lovebird" !important;
-	    font-style: normal !important;
-	    font-weight: normal !important;
-	    font-variant: normal !important;
-	    text-transform: none !important;
-	    speak: none;
-	    line-height: 1;
-	    opacity: 1;
-	    @include remunit(font-size, pow(1.5, 2)*1rem);
-	}
+    font-size: 0;
+    color: transparent;
+    top: 20px;
+    right: 20px;
+    &:active{
+        top: 25px;
+    }
+    &:before{
+        content: "m";
+        font-family: "lovebird" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        opacity: 1;
+        @include remunit(font-size, pow(1.5, 2)*1rem);
+    }
 }
 
 .mfp-velocity{
-	.mfp-content{
-		.mfp-close{
-			display: none;
-		}
-	}
-	&.mfp-bg{
-		opacity: 0;
-	  	transition: all 0.3s ease-out;
-	}
+    .mfp-content{
+        .mfp-close{
+            display: none;
+        }
+    }
+    &.mfp-bg{
+        opacity: 0;
+          transition: all 0.3s ease-out;
+    }
 }
 
 .mfp-open .mfp-content {
@@ -712,7 +719,7 @@ button.mfp-arrow{
 }
 
 .mfp-open-next .mfp-content{
-	animation-name: rightfadeIn;
+    animation-name: rightfadeIn;
     animation-duration: .5s;;
     animation-fill-mode: both;
     -webkit-backface-visibility: hidden;
@@ -721,7 +728,7 @@ button.mfp-arrow{
 }
 
 .mfp-open-prev .mfp-content{
-	animation-name: leftfadeIn;
+    animation-name: leftfadeIn;
     animation-duration: .5s;;
     animation-fill-mode: both;
     -webkit-backface-visibility: hidden;
@@ -730,16 +737,16 @@ button.mfp-arrow{
 }
 
 .mfp-figure{
-	figure{
-		@include remunit(padding, 0.9375rem);
-	}
-	&:after{
-		border-style: solid;
-		@include remunit((
-			border-width: 0.125rem,
-			padding:  0.9375rem
-		));
-	}
+    figure{
+        @include remunit(padding, 0.9375rem);
+    }
+    &:after{
+        border-style: solid;
+        @include remunit((
+            border-width: 0.125rem,
+            padding:  0.9375rem
+        ));
+    }
 }
 
 // ----------------------
@@ -747,7 +754,7 @@ button.mfp-arrow{
 // ----------------------
 
 .parsley-errors-list{
-	@include remunit(margin-top, -1.5rem);
+    @include remunit(margin-top, -1.5rem);
 }
 
 
@@ -756,13 +763,13 @@ button.mfp-arrow{
 // ----------------------
 
 .ua-ie{
-	font-feature-settings: normal;
-	.lomo{
-		&:after{
-			display: none;
-		}
-		&:hover:after{
-			display: none;
-		}
-	}
+    font-feature-settings: normal;
+    .lomo{
+        &:after{
+            display: none;
+        }
+        &:hover:after{
+            display: none;
+        }
+    }
 }
